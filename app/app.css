@@ -1,0 +1,20 @@
+/* app css stylesheet */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.active {
+  background-color: #eee;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+}
