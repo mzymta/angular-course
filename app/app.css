@@ -2,6 +2,12 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: #47334e!important;
+  min-width: 280px;
+}
+
+body * {
+  color: #47334e!important;
 }
 
 .active {
@@ -17,4 +23,157 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
+}
+
+/*APP HEADER*/
+
+.app-header {
+  border-radius: initial;
+  border: none;
+  border-bottom: 5px solid #47334e;
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+
+.app-header__logo {
+  color: #47334e!important;
+  font-family: 'Cutive', serif;
+}
+
+.app-header__logo-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.app-header__logo-icon::before {
+  color: #829466;
+}
+
+.app-header__search-input {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #47334e;
+  box-shadow: none;
+}
+
+.app-header__search-input::placeholder {
+  color: #694C73;
+}
+
+
+
+.app-header__search-input:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #47334e;
+}
+
+.app-header__search-icon-wrapper {
+  border: 0;
+  border-bottom: 1px solid #47334e;
+  border-radius: 0;
+  cursor: text;
+  background-color: transparent;
+}
+
+
+.app-header__toggle {
+   border: none;
+   border-radius: 0;
+ }
+
+.app-header__toggle:focus,
+.app-header__toggle:hover {
+  background-color: transparent!important;
+}
+
+.app-header__toggle .icon-bar {
+  background-color: #47334e!important;
+}
+
+.app-header__toggle:focus .icon-bar,
+.app-header__toggle:hover .icon-bar {
+  background-color: #4C3C4E!important;
+}
+
+.app-header__collapse-menu {
+  border: 0;
+}
+
+.app-header__search-form {
+  border: 0;
+}
+
+/*phone LIST*/
+.phone-list {
+  padding-bottom: 75px;
+}
+
+.phone-list__item {
+  padding: 40px 15px;
+  border-bottom: 2px solid #A88294;
+  border-radius: 20px;
+}
+
+.phone-list__info {
+  font-size: 18px;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  word-break: break-all;
+  padding: 20px;
+  border-top: 1px solid #A88294;
+  border-bottom: 1px solid #A88294;
+}
+
+.phone:last-child {
+  border-bottom: 0;
+}
+
+.phone__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.phone__image-wrapper {
+  margin-bottom: 15px;
+}
+
+.phone__nav {
+  margin-bottom: 20px;
+}
+
+.phone__tab {
+  border-bottom: 1px solid #A88294;
+}
+
+.phone__tab-link {
+  border-radius: 0!important;
+  background-color: transparent!important;
+  margin-bottom: 0!important;
+  transition: .2s;
+  border-bottom: 3px solid transparent;
+}
+
+.phone__tab_active .phone__tab-link {
+  border-bottom-color: #A88294;
+}
+
+.phone__info-title {
+  font-size: 20px;
+}
+
+
+@media (min-width: 768px) {
+  .app-header__search-form {
+    padding: 0;
+  }
+
+  .phone-list__item {
+    border-bottom: 1px dashed #A88294;
+  }
+
+  .phone__image-wrapper {
+    margin-bottom: 0;
+  }
 }

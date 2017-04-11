@@ -1,24 +1,23 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
+<nav class="app-header navbar navbar-default">
+    <div class="app-header__inner container-fluid">
+        <div class="app-header__logo-wrapper navbar-header">
             <button type="button"
-                    ng-click='$ctrl.toggleMenuState()' class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    ng-click='$ctrl.toggleMenuState()' class="app-header__toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="app-header__toggle-line icon-bar"></span>
+                <span class="app-header__toggle-line icon-bar"></span>
+                <span class="app-header__toggle-line icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">mobileStore</a>
+            <a class="app-header__logo navbar-brand" href="#"><span class="app-header__logo-icon glyphicon glyphicon-apple"></span>mobileStore</a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
+        <div class="app-header__collapse-menu collapse navbar-collapse" id="bs-example-navbar-collapse-1"
              ng-class='{"in" : $ctrl.menuOpen}'>
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" ng-model="search.value" placeholder="Search for...">
-                        <span class="input-group-btn">
-                              <button class="btn btn-default " type="button">
-                                  <span class="glyphicon glyphicon-search"></span>
+            <form class="app-header__search-form navbar-form navbar-right">
+                <div class="app-header__search-form-inner form-group">
+                    <div class="app-header__search-input-wrapper input-group">
+                        <input type="text" class="app-header__search-input form-control" ng-model="$ctrl.search" id="search" placeholder="Search for...">                                   <label class="app-header__search-icon-wrapper input-group-addon" for="search" autofocus>
+                            <span class="app-header__search-icon glyphicon glyphicon-search"></span>
+                        </label>
                               </button>
                         </span>
                     </div>

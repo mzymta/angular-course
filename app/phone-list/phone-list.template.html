@@ -1,50 +1,11 @@
-<div>
-    <div class="product thumbnail"
-         ng-repeat="phone in $ctrl.phones | filter: {name: search.value}">
-        <div class="caption">
-            <h1>{{phone.name}}</h1>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <img ng-src="{{phone.image}}" alt="{{phone.name}}">
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <nav class="app-nav text-center">
-                        <ul class="app-nav__list nav nav-tabs nav-justified">
-                            <li class="app-nav__item"
-                                ng-class="{'active' : $ctrl.tab === 1 }">
-                                <a href
-                                   ng-click="tab = 1">Description</a>
-                            </li>
-                            <li class="app-nav__item"
-                                ng-class="{'active' : $ctrl.tab  === 2 }">
-                                <a href
-                                   ng-click="tab = 2">Specs</a>
-                            </li>
-                            <li class="app-nav__item"
-                                ng-class="{'active' : $ctrl.tab  === 3 }">
-                                <a href ng-click="tab = 3">Reviews</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <section class="panel-list">
-                        <div class="panel-list__panel"
-                             ng-show="$ctrl.tab  === 1">
-                            <h3>{{phone.description.title}}</h3>
-                            <p>{{phone.description.text}}</p>
-                        </div>
-                        <div class="panel-list__panel"
-                             ng-show="$ctrl.tab  === 2">
-                            <h3>{{phone.specs.title}}</h3>
-                            <p>{{phone.specs.text}}</p>
-                        </div>
-                        <div class="panel-list__panel"
-                             ng-show="$ctrl.tab  === 3">
-                            <h3>{{phone.reviews.title}}</h3>
-                            <p>{{phone.reviews.text}}</p>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="phone-list">
+    <section class="phone-list__item"
+         ng-repeat="phone in filteredPhones = ($ctrl.phones | filter: {name: $ctrl.search})">
+
+        <phone-item
+            phone="phone"
+            tab-names = "$ctrl.tabNames"></phone-item>
+    </section>
+    <div class="phone-list__info"
+    ng-hide="filteredPhones.length">Oops... We found nothing matching "{{$ctrl.search}}"</div>
 </div>

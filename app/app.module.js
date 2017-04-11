@@ -2,11 +2,19 @@
 
 var app = angular.module('mobileStore', [
     'appHeader',
-    'phoneList'
+    'phoneList',
+    'phoneItem'
 ]);
 
- app.factory('Search', function(){
-     return {
-        value: ""
-     }
- });
+app.component("mobileStore", {
+    controller: function MobileStoreController() {
+        this.searchQuery = "";
+    }
+});
+
+
+ // app.factory('Search', function(){
+ //     return {
+ //        value: ""
+ //     }
+ // });

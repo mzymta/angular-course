@@ -11,6 +11,9 @@ angular.
             this.menuOpen = !this.menuOpen;
         }
 
-        // this.search = Search;
+        //this.search = "";
+    },
+    bindings: {
+        search: "="
     }
 });
