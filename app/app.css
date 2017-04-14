@@ -1,13 +1,13 @@
 /* app css stylesheet */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   color: #47334e!important;
   min-width: 280px;
 }
 
-body * {
-  color: #47334e!important;
+body {
+  color: #47334e;
 }
 
 .active {
@@ -21,8 +21,19 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
+}
+
+/* bootstrap*/
+label {
+  font-weight: 400;
+}
+.form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #47334e;
+  box-shadow: none;
 }
 
 /*APP HEADER*/
@@ -49,12 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #829466;
 }
 
-.app-header__search-input {
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid #47334e;
-  box-shadow: none;
-}
+
 
 .app-header__search-input::placeholder {
   color: #694C73;
@@ -163,6 +169,127 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
 }
 
+/*REVIEWS*/
+.review-tab {
+  position: relative;
+}
+
+.review-tab__toggle-form {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 0px;
+  background-color: #A88294;
+  outline: none!important;
+  animation: appearRight .5s;
+
+}
+
+
+.review-tab__toggle-form .review-tab__toggle-form-minus {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.review-tab__toggle-form .review-tab__toggle-form-plus {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.review-tab__toggle-form .review-tab__toggle-form-plus::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.review-tab__toggle-form .review-tab__toggle-form-plus::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.review-tab__label {
+  display: block;
+}
+
+.review-tab__reviews {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.review-tab__review-wrapper {
+  width: 100%;
+}
+
+.review-tab__review {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border: 1px solid #A88294;
+  border-radius: 0 25px 25px 25px;
+  box-shadow: 4px 4px 0 0 #CCBFC3;
+}
+
+.review-tab__review * {
+  transition: .5s;
+}
+
+
+.review-tab__review.review-tab__review_temp {
+  border: 1px dashed #CCBFC3;
+  color: #CCBFC3!important;
+  box-shadow: 4px 4px 0 0 #DED0D4;
+}
+
+.review-tab__stars-rating {
+  margin-bottom: 5px;
+}
+
+.review-tab__author {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.review-tab__body {
+  padding: 5px;
+  border-top: 1px solid #DED0D4;
+}
+
+
+.review-tab__text {
+  font-size: 14px;
+}
+
+.review-tab__form {
+  animation: appearTop .4s;
+}
+
+.review-tab__stars-wrapper {
+  white-space: nowrap;
+}
 
 @media (min-width: 768px) {
   .app-header__search-form {
@@ -170,10 +297,51 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .phone-list__item {
-    border-bottom: 1px dashed #A88294;
+    border-bottom: 1px solid #A88294;
   }
 
   .phone__image-wrapper {
     margin-bottom: 0;
+  }
+
+  .review-tab__review-wrapper {
+    width: 48%;
+  }
+
+  .review-tab__review-wrapper:nth-child(2n+1) {
+    margin-right: 2%;
+  }
+
+  .review-tab__review-wrapper:nth-child(2n) {
+    margin-left: 2%;
+  }
+}
+
+
+@keyframes appearRight {
+  0% {
+    opacity: 0.2;
+    transform: translateX(10px);
+  }
+}
+
+@keyframes appearLeft {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes appearTop {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes appearBottom {
+  0% {
+    opacity: 0.2;
+    transform: translateY(10px);
   }
 }

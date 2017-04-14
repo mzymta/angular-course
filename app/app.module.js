@@ -3,7 +3,8 @@
 var app = angular.module('mobileStore', [
     'appHeader',
     'phoneList',
-    'phoneItem'
+    'phoneItem',
+    'reviewTab'
 ]);
 
 app.component("mobileStore", {
@@ -13,8 +14,3 @@ app.component("mobileStore", {
 });
 
 
- // app.factory('Search', function(){
- //     return {
- //        value: ""
- //     }
- // });

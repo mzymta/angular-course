@@ -1,0 +1,106 @@
+<div class="review-tab">
+    <button class="review-tab__toggle-form btn" type="button"
+            ng-click="$ctrl.toggleReviewForm()">
+        <span class="review-tab__toggle-form-plus"
+              ng-show="!$ctrl.isReviewFormShown()" title="Add review">Add review</span>
+        <span class="review-tab__toggle-form-minus"
+              ng-show="$ctrl.isReviewFormShown()" title="Hide form"></span>
+    </button>
+    <div class="review-tab__reviews">
+        <div class="review-tab__review-wrapper"
+             ng-repeat="review in $ctrl.reviews">
+            <div class="review-tab__review">
+                <div class="review-tab__review-head clearfix">
+                    <div class="review-tab__stars-rating">
+                        {{review.stars}}
+                    </div>
+                    <div class="review-tab__author">
+                        {{review.author}}
+                    </div>
+                </div>
+                <div class="review-tab__body">
+                    <p class="review-tab__text">
+                        {{review.body}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="review-tab__review-wrapper">
+            <div class="review-tab__review review-tab__review_temp"
+                 ng-show="$ctrl.isReviewFormShown()">
+                <div class="review-tab__review-head clearfix">
+                    <div class="review-tab__stars-rating">{{$ctrl.newReview.stars}}
+                    </div>
+                    <div class="review-tab__author">{{$ctrl.newReview.author}}
+                    </div>
+                </div>
+                <div class="review-tab__body">
+                    <p class="review-tab__text">{{$ctrl.newReview.body}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="review-tab__form form"
+          name="reviewForm"
+          ng-show="$ctrl.isReviewFormShown()">
+        <label class="review-tab__label">
+            <div class="row">
+                <div class="col-xs-6">Rating:</div>
+                <div class="col-xs-6">
+                    <div class="review-tab__stars-wrapper">
+                        <label class="review-tab__star glyphicon glyphicon-star">
+                            <span class="review-tab__star-value">5</span>
+                            <input class="review-tab__star-checkbox" required type="radio" name="rating" value="5"
+                                   ng-model="$ctrl.newReview.stars">
+                        </label>
+                        <label class="review-tab__star glyphicon glyphicon-star">
+                            <span class="review-tab__star-value">4</span>
+                            <input class="review-tab__star-checkbox" required type="radio" name="rating" value="4"
+                                   ng-model="$ctrl.newReview.stars">
+                        </label>
+                        <label class="review-tab__star glyphicon glyphicon-star">
+                            <span class="review-tab__star-value">3</span>
+                            <input class="review-tab__star-checkbox" required type="radio" name="rating" value="3"
+                                   ng-model="$ctrl.newReview.stars">
+                        </label>
+                        <label class="review-tab__star glyphicon glyphicon-star">
+                            <span class="review-tab__star-value">2</span>
+                            <input class="review-tab__star-checkbox" required type="radio" name="rating" value="2"
+                                   ng-model="$ctrl.newReview.stars">
+                        </label>
+                        <label class="review-tab__star glyphicon glyphicon-star">
+                            <span class="review-tab__star-value">1</span>
+                            <input class="review-tab__star-checkbox" required type="radio" name="rating" value="1"
+                                   ng-model="$ctrl.newReview.stars">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </label>
+        <label class="review-tab__label">
+            <div class="row">
+                <div class="col-xs-6">Name:</div>
+                <div class="col-xs-6">
+                    <input type="text" name="name" required
+                           ng-model="$ctrl.newReview.author">
+                </div>
+            </div>
+        </label>
+        <label class="review-tab__label">
+            <div class="row">
+                <div class="col-xs-6">Review text:</div>
+                <div class="col-xs-6">
+                    <textarea name="review" cols="30" rows="5" required
+                              ng-model="$ctrl.newReview.body"></textarea>
+                </div>
+            </div>
+        </label>
+        <div class="row">
+            <div class="col-xs-6">
+                <button type="button" class="btn btn-primary" ng-disabled="!$ctrl.isReviewFormValid(reviewForm)"
+                ng-click="$ctrl.addReview()">Post your review</button>
+            </div>
+        </div>
+    </form>
+</div>

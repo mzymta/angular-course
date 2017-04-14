@@ -5,7 +5,7 @@ angular.
     component('phoneItem', {
     templateUrl: 'phone-list/phone-item/phone-item.template.html',
     controller: function PhoneItemController() {
-        this.tab = 1;
+        this.tab = 3;
 
         this.selectTab = function(tabIndex) {
             this.tab = tabIndex;

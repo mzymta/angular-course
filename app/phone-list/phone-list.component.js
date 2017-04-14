@@ -16,8 +16,7 @@ angular.
                 specs: {
                     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequuntur cupiditate officiis reiciendis, repellat sed?"
                 },
-                reviews: {
-                    comments: [
+                reviews: [
                         {
                             stars: 5,
                             body: "blablabla",
@@ -25,11 +24,10 @@ angular.
                         },
                         {
                             stars: 4,
-                            body: "dadadadadadad",
+                            body: "I like it. It's good. Not best. Not worst. Just fine.",
                             author: "rachel@tim.com"
-                        },
+                        }
                     ]
-                }
             },
             {
                 name: "Xiaomi 20s",
@@ -40,8 +38,7 @@ angular.
                 specs: {
                     text: "lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorem ea, in officia perspiciatis quisquam reiciendis sapiente?"
                 },
-                reviews: {
-                    comments: [
+                reviews: [
                         {
                             stars: 5,
                             body: "2222blablabla",
@@ -52,8 +49,13 @@ angular.
                             body: "2222222",
                             author: "rachel@tim.com"
                         },
+                        {
+                            stars: 4,
+                            body: "I like it. It's good. Not best. Not worst. Just fine.",
+                            author: "rachel@tim.com"
+                        }
                     ]
-                }
+
             },
             {
                 name: "Nexus 5",
@@ -64,8 +66,7 @@ angular.
                 specs: {
                     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                 },
-                reviews: {
-                    comments: [
+                reviews: [
                         {
                             stars: 2,
                             body: "33333blablabla",
@@ -75,9 +76,8 @@ angular.
                             stars: 4,
                             body: "d3333333adadadadadad",
                             author: "rachel@tim.com"
-                        },
+                        }
                     ]
-                }
             },
             {
                 name: "Xiaomi 3s",
@@ -88,8 +88,7 @@ angular.
                 specs: {
                     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores exercitationem maxime nulla. Cumque cupiditate ea magnam minima nulla obcaecati pariatur rerum? Deserunt dolores harum iure provident ullam veniam vitae voluptas!"
                 },
-                reviews: {
-                    comments: [
+                reviews: [
                         {
                             stars: 1,
                             body: "444444blablabla",
@@ -99,9 +98,8 @@ angular.
                             stars: 4,
                             body: "4444444dadadadadadad",
                             author: "rachel@tim.com"
-                        },
+                        }
                     ]
-                }
             }
         ];
 

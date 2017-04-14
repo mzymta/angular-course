@@ -40,11 +40,10 @@
                 <div class="panel-list__panel"
                      ng-show="$ctrl.isTabSelected(3)">
                     <h3 class="phone__info-title">{{$ctrl.tabNames.reviews.title}}</h3>
-                    <p class="phone__info-text" ng-repeat="comment in $ctrl.phone.reviews.comments">
-                        {{comment.stars}}<br>
-                        {{comment.body}}<br>
-                        {{comment.author}}
-                    </p>
+                    <div class="phone__review-wrapper">
+                        <review-tab
+                            reviews="$ctrl.phone.reviews"></review-tab>
+                    </div>
 
                 </div>
             </div>
