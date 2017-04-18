@@ -3,9 +3,12 @@
 angular.
     module('reviewTab').
     component('reviewTab', {
-    templateUrl: 'phone-list/phone-item/review-tab/review-tab.template.html',
-    controller: function ReviewTabController() {
+    templateUrl: 'phone-detail/review-tab/review-tab.template.html',
+    controller: function ReviewTabController($http) {
         this.reviewFormShown = false;
+
+        this.newReview = {};
+        this.newReview.stars = 1;
 
         this.isReviewFormShown = function() {
             return this.reviewFormShown;
@@ -15,13 +18,11 @@ angular.
             this.reviewFormShown = !this.reviewFormShown;
         };
 
-        this.newReview = {};
-
         this.addReview = function() {
            this.reviews.push(this.newReview);
 
            this.newReview = {};
-
+           this.newReview.stars = 1;
         };
 
         this.isReviewFormValid = function(form) {

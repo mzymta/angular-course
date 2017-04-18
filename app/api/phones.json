@@ -1,0 +1,252 @@
+[  
+   {  
+      "name":"Motorola Moto Z Play",
+      "id":"motorola-moto-z-play",
+      "price":449,
+      "image":"images/motorola-moto-z-play.jpg",
+      "description":{  
+         "text":"Motorola Moto Z Play smartphone was launched in August 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 403 pixels per inch."
+      },
+      "specs":{  
+         "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequuntur cupiditate officiis reiciendis, repellat sed?"
+      },
+      "rating": 4.5,
+      "reviews":[  
+         {  
+            "stars":5,
+            "body":"blablabla",
+            "author":"tim@tim.com"
+         },
+         {  
+            "stars":4,
+            "body":"I like it. It's good. Not best. Not worst. Just fine.",
+            "author":"rachel@tim.com"
+         }
+      ]
+   },
+   {  
+      "name":"Google Pixel",
+      "id":"google-pixel",
+      "price":649,
+      "image":"images/google-pixel.jpg",
+      "description":{  
+         "text":"Google Pixel smartphone with 5.00-inch 1080x1920 display powered by 1.6GHz quad-core processor alongside 4GB of RAM and 12.3-megapixel rear camera."
+      },
+      "specs":{  
+         "text":"lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorem ea, in officia perspiciatis quisquam reiciendis sapiente?"
+      },
+      "rating": 4,
+      "reviews":[  
+         {  
+            "stars":5,
+            "body":"2222blablabla",
+            "author":"tim@tim.com"
+         },
+         {  
+            "stars":3,
+            "body":"2222222",
+            "author":"rachel@tim.com"
+         },
+         {  
+            "stars":4,
+            "body":"I like it. It's good. Not best. Not worst. Just fine.",
+            "author":"rachel@tim.com"
+         }
+      ]
+   },
+   {  
+      "name":"OnePlus 3T",
+      "id":"oneplus-3t",
+      "price":399,
+      "image":"images/oneplus-3t.jpg",
+      "description":{  
+         "text":"OnePlus 3T Android smartphone. Announced 2016, November. Features 3G, 5.5″ Optic AMOLED capacitive touchscreen, 16 MP camera, Wi-Fi, GPS."
+      },
+      "specs":{  
+         "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      },
+      "rating": 3,
+      "reviews":[  
+         {  
+            "stars":2,
+            "body":"33333blablabla",
+            "author":"tim@tim.com"
+         },
+         {  
+            "stars":4,
+            "body":"d3333333adadadadadad",
+            "author":"rachel@tim.com"
+         }
+      ]
+   },
+   {  
+      "name":"HTC 10",
+      "id": "htc-10",
+      "price": 599,
+      "image":"images/htc-10.jpg",
+      "description":{  
+         "text":"Xiaomi 20s Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{  
+         "text":"HTC 10 Android smartphone. Announced 2016, April. Features 3G, 5.2″ Super LCD5 capacitive touchscreen, 12 MP camera, Wi-Fi, GPS, Bluetooth."
+      },
+      "rating": 2.5,
+      "reviews":[  
+         {  
+            "stars":1,
+            "body":"444444blablabla",
+            "author":"tim@tim.com"
+         },
+         {  
+            "stars":4,
+            "body":"4444444dadadadadadad",
+            "author":"rachel@tim.com"
+         }
+      ]
+   },
+   {
+      "name":"Motorola Moto Z",
+      "id":"motorola-moto-z",
+      "price":354,
+      "image":"images/motorola-moto-z.jpg",
+      "description":{
+         "text":"Motorola Moto Z Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"Motorola Moto Z Android smartphone. Announced 2016, June. Features 3G, 5.5″ AMOLED capacitive touchscreen, 13 MP camera, Wi-Fi, GPS, Bluetooth."
+      },
+      "rating": 3,
+      "reviews":[
+         {
+            "stars":1,
+            "body":"444444blablabla",
+            "author":"tim@tim.com"
+         },
+         {
+            "stars":4,
+            "body":"4444444dadadadadadad",
+            "author":"rachel@tim.com"
+         },
+         {
+            "stars":3,
+            "body":"444444blablabla",
+            "author":"tim@tim.com"
+         },
+         {
+            "stars":4,
+            "body":"4444444dadadadadadad",
+            "author":"rachel@tim.com"
+         }
+      ]
+   },
+   {
+      "name":"iPhone 7",
+      "id":"iphone-7",
+      "price":649,
+      "image":"images/iphone-7.jpg",
+      "description":{
+         "text":"iPhone 7 Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"Apple iPhone 7 smartphone with 4.70-inch 750x1334 display powered by quad-core processor alongside 2GB of RAM and 12-megapixel rear camera."
+      },
+      "rating": 5,
+      "reviews":[
+         {
+            "stars":5,
+            "body":"iPhone 7 is good",
+            "author":"douche@turd.com"
+         }
+      ]
+   },
+   {
+      "name":"LG G5",
+      "id":"lg-g5",
+      "price":535,
+      "image":"images/lg-g5.jpg",
+      "description":{
+         "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"LG G5 smartphone was launched in February 2016. The phone comes with a 5.30-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 554 pixels per inch."
+      },
+      "rating": 3,
+      "reviews":[
+         {
+            "stars":3,
+            "body":"LG G5 is bad",
+            "author":"douche@turd.com"
+         }
+      ]
+   },
+   {
+      "name":"iPhone 7 Plus",
+      "id":"iphone-7-plus",
+      "price":769,
+      "image":"images/iphone-7-plus.jpg",
+      "description":{
+         "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"Apple iPhone 7 Plus smartphone was launched in September 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 401 pixels per inch."
+      },
+      "rating": 3,
+      "reviews":[
+         {
+            "stars":3,
+            "body":"LG G5 is bad",
+            "author":"douche@turd.com"
+         }
+      ]
+   },
+   {
+      "name":"Samsung Galaxy S7",
+      "id":"samsung-galaxy-s7",
+      "price":670,
+      "image":"images/samsung-galaxy-s7.jpg",
+      "description":{
+         "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"Samsung Galaxy S7 smartphone was launched in February 2016. The phone comes with a 5.10-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 577 pixels per inch."
+      },
+      "rating": 4,
+      "reviews":[
+         {
+            "stars":3,
+            "body":"Samsung Galaxy S7 is bad",
+            "author":"douche@turd.com"
+         },
+         {
+            "stars":5,
+            "body":"Samsung Galaxy S7 is good",
+            "author":"douche@turd.com"
+         }
+      ]
+   },
+   {
+      "name":"Samsung Galaxy S7 Edge",
+      "id":"samsung-galaxy-s7-edge",
+      "price":780,
+      "image":"images/samsung-galaxy-s7-edge.jpg",
+      "description":{
+         "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."
+      },
+      "specs":{
+         "text":"Samsung Galaxy S7 Edge smartphone was launched in February 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 534 pixels per inch."
+      },
+      "rating": 4,
+      "reviews":[
+         {
+            "stars":3,
+            "body":"Samsung Galaxy S7 Edge is bad",
+            "author":"douche@turd.com"
+         },
+         {
+            "stars":5,
+            "body":"Samsung Galaxy S7 Edge is good",
+            "author":"douche@turd.com"
+         }
+      ]
+   }
+]

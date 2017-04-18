@@ -1,52 +1,29 @@
-<div class="phone">
-    <h2 class="phone__title">{{$ctrl.phone.name}}</h2>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <div class="phone__image-wrapper">
-                <img class="phone__image" ng-src="{{$ctrl.phone.image}}" alt="{{$ctrl.phone.name}}">
-            </div>
+<div class="phone-item">
+    <a href="#!/phones/{{$ctrl.phone.id}}">
+        <div class="phone-item__image-wrapper">
+            <img class="phone-item__image" ng-src="{{$ctrl.phone.image}}" alt="{{$ctrl.phone.name}}">
         </div>
-        <div class="col-xs-12 col-sm-8">
-            <nav class="phone__nav app-nav text-center">
-                <ul class="phone__tab-list app-nav__list nav nav-pills nav-justified">
-                    <li class="phone__tab app-nav__item"
-                        ng-class="{'phone__tab_active' : $ctrl.isTabSelected(1) }">
-                        <a href class="phone__tab-link"
-                           ng-click="$ctrl.selectTab(1)">{{$ctrl.tabNames.description.name}}</a>
-                    </li>
-                    <li class="phone__tab  app-nav__item"
-                        ng-class="{'phone__tab_active' : $ctrl.isTabSelected(2) }">
-                        <a href class="phone__tab-link"
-                           ng-click="$ctrl.selectTab(2)">{{$ctrl.tabNames.specs.name}}</a>
-                    </li>
-                    <li class="phone__tab app-nav__item"
-                        ng-class="{'phone__tab_active' : $ctrl.isTabSelected(3) }">
-                        <a href class="phone__tab-link"
-                           ng-click="$ctrl.selectTab(3)">{{$ctrl.tabNames.reviews.name}}</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="phone__info">
-                <div class="phone__info-item"
-                     ng-show="$ctrl.isTabSelected(1)">
-                    <h3 class="phone__info-title">{{$ctrl.tabNames.description.title}}</h3>
-                    <p class="phone__info-text">{{$ctrl.phone.description.text}}</p>
-                </div>
-                <div class="panel-list__panel"
-                     ng-show="$ctrl.isTabSelected(2)">
-                    <h3 class="phone__info-title">{{$ctrl.tabNames.specs.title}}</h3>
-                    <p class="phone__info-text">{{$ctrl.phone.specs.text}}</p>
-                </div>
-                <div class="panel-list__panel"
-                     ng-show="$ctrl.isTabSelected(3)">
-                    <h3 class="phone__info-title">{{$ctrl.tabNames.reviews.title}}</h3>
-                    <div class="phone__review-wrapper">
-                        <review-tab
-                            reviews="$ctrl.phone.reviews"></review-tab>
-                    </div>
+    </a>
+    <a href="#!/phones/{{$ctrl.phone.id}}"
+        class="phone-item__title-wrapper">
+        <h2 class="phone-item__title">{{$ctrl.phone.name}}</h2>
+    </a>
 
-                </div>
+    <span class="phone-item__price">{{$ctrl.phone.price | currency}}</span>
+
+    <a href="#!/phones/{{$ctrl.phone.id}}" class="phone-item__rating-wrapper">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <span class="phone-item__key">Rating:</span>
+                <span class="phone-item__value">{{$ctrl.phone.rating}}&#x2605;</span></div>
+            <div class="col-xs-12 col-sm-6">
+                <span class="phone-item__key">Reviews:</span>
+                <span class="phone-item__value">{{$ctrl.getReviewsNumber()}}</span>
             </div>
         </div>
-    </div>
+    </a>
+    <p class="phone-item__info">
+        {{$ctrl.phone.description.text}}
+    </p>
+
 </div>

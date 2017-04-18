@@ -2,7 +2,9 @@
     <div class="app-header__inner container-fluid">
         <div class="app-header__logo-wrapper navbar-header">
             <button type="button"
-                    ng-click='$ctrl.toggleMenuState()' class="app-header__toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    ng-click='$ctrl.toggleMenuState()'
+                    ng-if="$ctrl.hasMenu"
+                    class="app-header__toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="app-header__toggle-line icon-bar"></span>
                 <span class="app-header__toggle-line icon-bar"></span>
@@ -11,7 +13,7 @@
             <a class="app-header__logo navbar-brand" href="#"><span class="app-header__logo-icon glyphicon glyphicon-apple"></span>mobileStore</a>
         </div>
         <div class="app-header__collapse-menu collapse navbar-collapse" id="bs-example-navbar-collapse-1"
-             ng-class='{"in" : $ctrl.menuOpen}'>
+             ng-class='{"in" : $ctrl.menuOpen}' ng-if="$ctrl.hasMenu">
             <form class="app-header__search-form navbar-form navbar-right">
                 <div class="app-header__search-form-inner form-group">
                     <div class="app-header__search-input-wrapper input-group">
