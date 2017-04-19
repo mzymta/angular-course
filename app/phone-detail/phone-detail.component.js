@@ -5,6 +5,7 @@ angular.module('phoneDetail', [])
                 var self = this;
 
                 this.phone = {};
+                self.tabNames = {};
 
                 this.phoneId = $routeParams.phoneId;
 
@@ -17,25 +18,19 @@ angular.module('phoneDetail', [])
                             self.phone = item;
                         }
                     });
-                    console.log(self.phone);
                 });
 
                 $http({
                     method: 'GET',
-                    url: '/api/tabs.json'
+                    url: '/api/tab-names.json'
                 }).then(function successCallback(response) {
                     self.tabNames = response.data;
-                    console.log(response.data);
                 });
 
-                this.tab = 1;
-
-                this.selectTab = function(tabIndex) {
-                    this.tab = tabIndex;
-                };
+                this.selectedTab = 1;
 
                 this.isTabSelected = function(tabIndex) {
-                    return this.tab === tabIndex;
+                    return this.selectedTab === tabIndex;
                 }
 
                 this.getRating = function() {
@@ -50,6 +45,13 @@ angular.module('phoneDetail', [])
 
                 this.getReviewsNumber = function() {
                     return self.phone.reviews.length;
+                }
+
+                this.isValidId = function() {
+
+                    if(Object.keys(this.phone).length !== 0) return true;
+
+                    return false;
                 }
             }]
     });

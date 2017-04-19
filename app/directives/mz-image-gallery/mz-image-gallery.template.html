@@ -1,0 +1,16 @@
+<div class="mz-image-gallery">
+    <div class="mz-image-gallery__main-wrapper">
+        <img ng-src="{{images[mainIndex]}}"
+             alt="{{phoneName}}">
+    </div>
+    <ul class="mz-image-gallery__list">
+        <li class="mz-image-gallery__item"
+            ng-class="{'mz-image-gallery__item_active': isImageSelected($index)}"
+            ng-repeat="image in images"
+            ng-click="selectImage($index)">
+            <img
+                    ng-src="{{image}}"
+                    alt="{{phoneName}}" class="phone-detail__image">
+        </li>
+    </ul>
+</div>

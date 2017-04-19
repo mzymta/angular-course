@@ -3,7 +3,11 @@
       "name":"Motorola Moto Z Play",
       "id":"motorola-moto-z-play",
       "price":449,
-      "image":"images/motorola-moto-z-play.jpg",
+      "images": [
+         "images/motorola-moto-z-play.jpg",
+         "images/motorola-moto-z-play-2.jpg",
+         "images/motorola-moto-z-play-3.jpg"
+      ],
       "description":{  
          "text":"Motorola Moto Z Play smartphone was launched in August 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 403 pixels per inch."
       },
@@ -28,7 +32,11 @@
       "name":"Google Pixel",
       "id":"google-pixel",
       "price":649,
-      "image":"images/google-pixel.jpg",
+      "images": [
+         "images/google-pixel.jpg",
+         "images/google-pixel-2.jpg",
+         "images/google-pixel-3.jpg"
+      ],
       "description":{  
          "text":"Google Pixel smartphone with 5.00-inch 1080x1920 display powered by 1.6GHz quad-core processor alongside 4GB of RAM and 12.3-megapixel rear camera."
       },
@@ -58,7 +66,11 @@
       "name":"OnePlus 3T",
       "id":"oneplus-3t",
       "price":399,
-      "image":"images/oneplus-3t.jpg",
+      "images": [
+         "images/oneplus-3t.jpg",
+         "images/oneplus-3t-2.jpg",
+         "images/oneplus-3t-3.jpg"
+      ],
       "description":{  
          "text":"OnePlus 3T Android smartphone. Announced 2016, November. Features 3G, 5.5″ Optic AMOLED capacitive touchscreen, 16 MP camera, Wi-Fi, GPS."
       },
@@ -83,9 +95,13 @@
       "name":"HTC 10",
       "id": "htc-10",
       "price": 599,
-      "image":"images/htc-10.jpg",
+      "images": [
+         "images/htc-10.jpg",
+         "images/htc-10-2.jpg",
+         "images/htc-10-3.jpg"
+      ],
       "description":{  
-         "text":"Xiaomi 20s Lorem ipsum dolor sit amet, consectetur adipisicing."
+         "text":"HTC 10 Android smartphone. Announced 2016, April. Features 3G, 5.2″ Super LCD5 capacitive touchscreen, 12 MP camera, Wi-Fi, GPS, Bluetooth."
       },
       "specs":{  
          "text":"HTC 10 Android smartphone. Announced 2016, April. Features 3G, 5.2″ Super LCD5 capacitive touchscreen, 12 MP camera, Wi-Fi, GPS, Bluetooth."
@@ -108,7 +124,11 @@
       "name":"Motorola Moto Z",
       "id":"motorola-moto-z",
       "price":354,
-      "image":"images/motorola-moto-z.jpg",
+      "images": [
+         "images/motorola-moto-z.jpg",
+         "images/motorola-moto-z-2.jpg",
+         "images/motorola-moto-z-3.jpg"
+      ],
       "description":{
          "text":"Motorola Moto Z Lorem ipsum dolor sit amet, consectetur adipisicing."
       },
@@ -144,6 +164,11 @@
       "id":"iphone-7",
       "price":649,
       "image":"images/iphone-7.jpg",
+      "images": [
+         "images/iphone-7.jpg",
+         "images/iphone-7-2.jpg",
+         "images/iphone-7-3.jpg"
+      ],
       "description":{
          "text":"iPhone 7 Lorem ipsum dolor sit amet, consectetur adipisicing."
       },
@@ -163,7 +188,11 @@
       "name":"LG G5",
       "id":"lg-g5",
       "price":535,
-      "image":"images/lg-g5.jpg",
+      "images": [
+         "images/lg-g5.jpg",
+         "images/lg-g5-2.jpg",
+         "images/lg-g5-3.jpg"
+      ],
       "description":{
          "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
       },
@@ -183,7 +212,11 @@
       "name":"iPhone 7 Plus",
       "id":"iphone-7-plus",
       "price":769,
-      "image":"images/iphone-7-plus.jpg",
+      "images": [
+         "images/iphone-7-plus.jpg",
+         "images/iphone-7-plus-2.jpg",
+         "images/iphone-7-plus-3.jpg"
+      ],
       "description":{
          "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
       },
@@ -203,7 +236,11 @@
       "name":"Samsung Galaxy S7",
       "id":"samsung-galaxy-s7",
       "price":670,
-      "image":"images/samsung-galaxy-s7.jpg",
+      "images": [
+         "images/samsung-galaxy-s7.jpg",
+         "images/samsung-galaxy-s7-2.jpg",
+         "images/samsung-galaxy-s7-3.jpg"
+      ],
       "description":{
          "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."
       },
@@ -228,7 +265,11 @@
       "name":"Samsung Galaxy S7 Edge",
       "id":"samsung-galaxy-s7-edge",
       "price":780,
-      "image":"images/samsung-galaxy-s7-edge.jpg",
+      "images": [
+         "images/samsung-galaxy-s7-edge.jpg",
+         "images/samsung-galaxy-s7-edge-2.jpg",
+         "images/samsung-galaxy-s7-edge-3.jpg"
+      ],
       "description":{
          "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."
       },

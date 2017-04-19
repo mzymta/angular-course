@@ -23,7 +23,6 @@ directive('mzStarRating', function () {
                     scope.stars.push({index: i, filled: i < scope.ratingValue, readonly: scope.readonly});
                 }
 
-                console.log(scope.stars);
             }
 
             scope.$watch('ratingValue', function(oldVal, newVal){

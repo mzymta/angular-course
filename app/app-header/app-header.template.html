@@ -1,5 +1,5 @@
 <nav class="app-header navbar navbar-default">
-    <div class="app-header__inner container-fluid">
+    <div class="app-header__inner container">
         <div class="app-header__logo-wrapper navbar-header">
             <button type="button"
                     ng-click='$ctrl.toggleMenuState()'
@@ -17,7 +17,7 @@
             <form class="app-header__search-form navbar-form navbar-right">
                 <div class="app-header__search-form-inner form-group">
                     <div class="app-header__search-input-wrapper input-group">
-                        <input type="text" class="app-header__search-input form-control" ng-model="$ctrl.search" id="search" placeholder="Search for...">                                   <label class="app-header__search-icon-wrapper input-group-addon" for="search" autofocus>
+                        <input type="text" class="app-header__search-input form-control" ng-model="$ctrl.search" id="search" placeholder="Search for..." autocomplete="off">                                   <label class="app-header__search-icon-wrapper input-group-addon" for="search" autofocus>
                             <span class="app-header__search-icon glyphicon glyphicon-search"></span>
                         </label>
                               </button>

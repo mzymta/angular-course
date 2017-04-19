@@ -1,0 +1,14 @@
+<div class="mz-tabs">
+    <nav class="mz-tabs__nav app-nav text-center">
+        <ul class="mz-tabs__tab-list app-nav__list nav nav-pills nav-justified">
+            <li class="mz-tabs__tab app-nav__item"
+                ng-repeat="tabName in tabNames"
+                ng-class="{'mz-tabs__tab_active' : isTabSelected($index + 1)}"
+                ng-click="selectTab($index + 1)">
+                <a href class="mz-tabs__tab-link">{{tabName}}</a>
+            </li>
+        </ul>
+    </nav>
+    <div ng-transclude></div>
+
+</div>

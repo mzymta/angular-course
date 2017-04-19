@@ -1,45 +1,50 @@
 <div class="phone-list">
+    <div class="container">
+        <div class="filter-pane"
+             ng-show="filteredPhones.length">
+            <div class="filter-pane__btn-block">
+                <span class="filter-pane__title">Name:</span>
+                <button ng-click="$ctrl.orderProp = 'name'" class="filter-pane__btn">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+                <button ng-click="$ctrl.orderProp = '-name'" class="filter-pane__btn"><span
+                        class="glyphicon glyphicon-arrow-up"></span></button>
+            </div>
+            <div class="filter-pane__btn-block">
+                <span class="filter-pane__title">Price:</span>
+                <button ng-click="$ctrl.orderProp = 'price'" class="filter-pane__btn">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+                <button ng-click="$ctrl.orderProp = '-price'" class="filter-pane__btn"><span
+                        class="glyphicon glyphicon-arrow-up"></span></button>
+            </div>
+            <div class="filter-pane__btn-block">
+                <span class="filter-pane__title">Rating:</span>
+                <button ng-click="$ctrl.orderProp = '-rating'" class="filter-pane__btn">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+                <button ng-click="$ctrl.orderProp = 'rating'" class="filter-pane__btn"><span
+                        class="glyphicon glyphicon-arrow-up"></span></button>
+            </div>
+        </div>
+        <span class="phone-list__results"
+              ng-show="filteredPhones.length && $ctrl.search">{{filteredPhones.length}} result(s) found matching your query: &laquo;{{$ctrl.search}}&raquo;</span>
 
-    <div class="filter-pane"
-        ng-show="filteredPhones.length">
-        <div class="filter-pane__btn-block">
-            <span class="filter-pane__title">Name:</span>
-            <button ng-click="$ctrl.orderProp = 'name'" class="filter-pane__btn">
-                <span class="glyphicon glyphicon-arrow-down"></span>
-            </button>
-            <button ng-click="$ctrl.orderProp = '-name'" class="filter-pane__btn"><span class="glyphicon glyphicon-arrow-up"></span></button>
+        <div class="phone-list__items">
+            <div class="phone-list__item-wrapper"
+                 ng-repeat="phone in filteredPhones = ($ctrl.phones | filter: {name: $ctrl.search} | orderBy:$ctrl.orderProp)">
+                <section class="phone-list__item">
+                    <phone-item
+                            phone="phone"></phone-item>
+                </section>
+            </div>
         </div>
-        <div class="filter-pane__btn-block">
-            <span class="filter-pane__title">Price:</span>
-            <button ng-click="$ctrl.orderProp = 'price'" class="filter-pane__btn">
-                <span class="glyphicon glyphicon-arrow-down"></span>
-            </button>
-            <button ng-click="$ctrl.orderProp = '-price'" class="filter-pane__btn"><span class="glyphicon glyphicon-arrow-up"></span></button>
-        </div>
-        <div class="filter-pane__btn-block">
-            <span class="filter-pane__title">Rating:</span>
-            <button ng-click="$ctrl.orderProp = '-rating'" class="filter-pane__btn">
-                <span class="glyphicon glyphicon-arrow-down"></span>
-            </button>
-            <button ng-click="$ctrl.orderProp = 'rating'" class="filter-pane__btn"><span class="glyphicon glyphicon-arrow-up"></span></button>
-        </div>
-    </div>
-    <span class="phone-list__results"
-            ng-show="filteredPhones.length && $ctrl.search">{{filteredPhones.length}} result(s) found matching your query: &laquo;{{$ctrl.search}}&raquo;</span>
 
-    <div class="phone-list__items">
-        <div class="phone-list__item-wrapper"
-             ng-repeat="phone in filteredPhones = ($ctrl.phones | filter: {name: $ctrl.search} | orderBy:$ctrl.orderProp)">
-            <section class="phone-list__item">
-                <phone-item
-                        phone="phone"></phone-item>
-            </section>
+        <div class="phone-list__info-message-wrapper">
+            <div class="phone-list__info-message"
+                 ng-hide="filteredPhones.length || !$ctrl.search">Oops... We found nothing matching &laquo;{{$ctrl.search}}&raquo;
+            </div>
         </div>
-    </div>
-
-    <div class="phone-list__info-message-wrapper">
-        <div class="phone-list__info-message"
-             ng-hide="filteredPhones.length || !$ctrl.search">Oops... We found nothing matching &laquo;{{$ctrl.search}}&raquo;</div>
     </div>
 
 </div>

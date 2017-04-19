@@ -4,6 +4,8 @@ body {
   font-family: 'Didact Gothic', sans-serif;
   color: #47334e!important;
   min-width: 280px;
+  background-color: #fff;
+
 }
 
 body {
@@ -33,11 +35,13 @@ a:focus {
  }
 
 textarea {
-  resize: vertical;
+  resize: none;
   display: block;
   width: 100%;
-
+  overflow: auto;
+  padding: 6px 12px;
   border: 1px solid #47334e;
+  outline: none;
 }
 
 /* bootstrap*/
@@ -51,14 +55,19 @@ label {
   box-shadow: none;
 }
 
-/*STAR Rating*/
+.form-control:focus {
+  box-shadow: none;
+  border-color: #47334e;
+}
+
+/*******************MZ STAR RATING*************************/
 .star-rating {
   list-style: none;
   padding: 0;
   margin: 0;
   white-space: nowrap;
-  height: 20px;
-  line-height: 20px;
+  height: 34px;
+  line-height: 34px;
 }
 
 .star-rating__star {
@@ -84,11 +93,146 @@ label {
   border: 1px solid #47334e;
   color: #47334e!important;
   transition: .2s;
+
 }
 
-.btn-primary:hover {
-  color: #fff;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover:active{
+  color: #fff!important;
   background: #47334e;
+}
+
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover:active{
+  color: #47334e!important;
+  background: transparent;
+  border-color: inherit;
+  cursor: default;
+  outline: none;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}
+
+/*******************MZ IMAGE GALLERY*************************/
+.mz-image-gallery {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.mz-image-gallery img {
+  max-height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mz-image-gallery__main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.mz-image-gallery__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-shrink: 0;
+  justify-content: center;
+  height: 25%;
+
+}
+
+.mz-image-gallery__item {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  border-bottom: 4px solid transparent;
+  transition: .2s;
+  padding: 10px;
+}
+
+.mz-image-gallery__item_active {
+  border-bottom-color: #47334e;
+}
+
+
+@media (min-width: 768px) {
+
+
+  .mz-image-gallery {
+    flex-direction: row;
+  }
+
+  .mz-image-gallery__list {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .mz-image-gallery__main-wrapper {
+    flex-grow: 1;
+    margin-right: 30px;
+    height: 100%;
+  }
+
+
+  .mz-image-gallery__item {
+    height: 30%;
+    width: auto;
+    margin: 0;
+    border: 0;
+    border-right: 4px solid transparent;
+  }
+
+  .mz-image-gallery__item_active {
+    border-right-color: #47334e;
+  }
+}
+/************************/
+
+/*******************MZ TABS*************************/
+.mz-tabs__nav {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.mz-tabs__tab {
+  border-bottom: 1px solid #47334e;
+}
+
+.mz-tabs__tab-link {
+  border-radius: 0!important;
+  background-color: transparent!important;
+  margin-bottom: 0!important;
+  transition: .2s;
+  border-bottom: 3px solid transparent;
+}
+
+.mz-tabs__tab_active .mz-tabs__tab-link {
+  border-bottom-color: #47334e;
 }
 
 /*APP HEADER*/
@@ -107,6 +251,7 @@ label {
 }
 
 .app-header__logo-icon {
+  animation: pumpLogo 2s infinite;
   font-size: 20px;
   margin-right: 5px;
 }
@@ -167,7 +312,7 @@ label {
 
 /*phone LIST*/
 .phone-list {
-  padding-bottom: 75px;
+  padding-bottom: 20px;
 }
 
 .phone-list__items {
@@ -258,6 +403,10 @@ label {
     font-size: 18px;
   }
 
+  .phone-item__info {
+    cursor: default;
+  }
+
   .phone-item__title-wrapper {
     margin-bottom: 10px;
   }
@@ -277,7 +426,7 @@ label {
 
 /*phone detail*/
 .phone-detail {
-  padding: 20px 0 50px;
+  padding: 20px 0 70px;
  }
 
 .phone-detail__header {
@@ -287,11 +436,11 @@ label {
 }
 
 .phone-detail__price {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .phone-detail__rating {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .phone-detail__rating-info {
@@ -302,36 +451,24 @@ label {
 }
 
 .phone-detail__title {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
-}
-
-.phone-detail__image-wrapper {
-  margin-bottom: 15px;
-}
-
-.phone-detail__nav {
-  margin-bottom: 20px;
-}
-
-.phone-detail__tab {
-  border-bottom: 1px solid #47334e;
-}
-
-.phone-detail__tab-link {
-  border-radius: 0!important;
-  background-color: transparent!important;
-  margin-bottom: 0!important;
-  transition: .2s;
-  border-bottom: 3px solid transparent;
-}
-
-.phone-detail__tab_active .phone-detail__tab-link {
-  border-bottom-color: #47334e;
+  margin-right: 20px;
 }
 
 .phone-detail__info-title {
   font-size: 20px;
+}
+
+.phone-detail__error {
+  font-size: 18px;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  word-break: break-all;
+  padding: 20px;
+  border-top: 1px solid #A88294;
+  border-bottom: 1px solid #A88294;
 }
 
 /*REVIEWS*/
@@ -396,12 +533,21 @@ label {
 
 .review-tab__label {
   display: block;
+  margin-bottom: 15px;
+}
+
+.review-tab__key {
+  margin-bottom: 5px;
+}
+
+.review-tab__form-header {
+  font-size: 20px;
 }
 
 .review-tab__reviews {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .review-tab__review-wrapper {
@@ -409,7 +555,7 @@ label {
 }
 
 .review-tab__review {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 10px 15px;
   border: 1px solid #A88294;
   border-radius: 0 25px 25px 25px;
@@ -425,6 +571,11 @@ label {
   border: 1px dashed #CCBFC3;
   color: #CCBFC3!important;
   box-shadow: 4px 4px 0 0 #DED0D4;
+  animation: appearBlinking .6s;
+}
+
+.review-tab__review.review-tab__review_temp .star-rating {
+  opacity: 0.4;
 }
 
 .review-tab__stars-rating {
@@ -456,6 +607,30 @@ label {
   white-space: nowrap;
 }
 
+.app-footer {
+  padding: 30px 15px;
+  text-align: center;
+  color: #fff!important;
+  background-color: #47334e;
+  background-image: linear-gradient(#47334e, #392640) ;
+  font-size: 22px;
+  font-family: 'Cutive', serif;
+}
+
+.app-footer__logo {
+  font-family: 'Cutive', serif;
+}
+
+
+.app-footer__logo-icon {
+  animation: pumpLogo 2s infinite;
+  margin-right: 5px;
+}
+
+.app-footer__copyright {
+  font-size: 10px;
+}
+
 @media (min-width: 768px) {
   .app-header__search-form {
     padding: 0;
@@ -485,16 +660,61 @@ label {
     margin-left: 2%;
   }
 
+  .review-tab__form {
+    margin: 0 auto;
+  }
+
+  .review-tab__form-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #47334e;
+  }
+
+  .review-tab__form-inner {
+    padding: 20px 25px;
+  }
+
+  .review-tab__key {
+    margin-bottom: 0;
+    line-height: 34px;
+  }
+
   .phone-list__results {
     border-bottom: 0;
     text-align: left;
 
   }
 
+  .phone-detail__rating {
+    padding: 5px 15px 100px;
+    display: table;
+  }
+
+  .phone-detail__rating-info {
+    display: block;
+    font-size: 22px;
+  }
+
+  .phone-detail__header {
+
+    margin-bottom: 30px;
+  }
+
+
+
+}
+
+@media (min-width: 992px) {
+  .phone-list__item-wrapper {
+    width: 25%;
+  }
+
+  .review-tab__form {
+    width: 70%;
+  }
 }
 
 
-@keyframes appearRight {
+  @keyframes appearRight {
   0% {
     opacity: 0.2;
     transform: translateX(10px);
@@ -519,5 +739,35 @@ label {
   0% {
     opacity: 0.2;
     transform: translateY(10px);
+  }
+}
+
+@keyframes appearBlinking {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  30% {
+      opacity: 0.6;
+    }
+  50% {
+      opacity: 0.4;
+    }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pumpLogo {
+  50% {
+    transform: scale(1.15);
   }
 }

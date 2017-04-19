@@ -1,66 +1,71 @@
 <div class="phone-detail">
-
-    <header class="phone-detail__header">
-        <h1 class="phone-detail__title">{{$ctrl.phone.name}}</h1>
-        <span class="phone-detail__price">{{$ctrl.phone.price | currency}}</span>
-    </header>
-
-    <div class="phone-detail__rating">
-        <div class="phone-detail__rating-info">
-            <span class="phone-detail__rating-key">Rating:</span>
-            <span class="phone-detail__rating-value">{{$ctrl.getRating()}}&#x2605;</span>
-        </div>
-        <div class="phone-detail__rating-info">
-            <span class="phone-detail__rating-key">Reviews:</span>
-            <span class="phone-detail__rating-value">{{$ctrl.getReviewsNumber()}}</span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <div class="phone-detail__image-wrapper">
-                <img class="phone-detail__image" ng-src="{{$ctrl.phone.image}}" alt="{{$ctrl.phone.name}}">
+    <div class="container">
+        <div class="phone-detail__inner"
+             ng-if="$ctrl.isValidId()">
+            <header class="phone-detail__header">
+                <h1 class="phone-detail__title">{{$ctrl.phone.name}}</h1>
+                <span class="phone-detail__price">{{$ctrl.phone.price | currency}}</span>
+            </header>
+            <div class="phone-detail__rating visible-xs">
+                <div class="phone-detail__rating-info">
+                    <span class="phone-detail__rating-key">Rating:</span>
+                    <span class="phone-detail__rating-value">{{$ctrl.getRating()}}&#x2605;</span>
+                </div>
+                <div class="phone-detail__rating-info">
+                    <span class="phone-detail__rating-key">Reviews:</span>
+                    <span class="phone-detail__rating-value">{{$ctrl.getReviewsNumber()}}</span>
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-8">
-            <nav class="phone-detail__nav app-nav text-center">
-                <ul class="phone-detail__tab-list app-nav__list nav nav-pills nav-justified">
-                    <li class="phone-detail__tab app-nav__item"
-                        ng-class="{'phone-detail__tab_active' : $ctrl.isTabSelected(1) }">
-                        <a href class="phone-detail__tab-link"
-                           ng-click="$ctrl.selectTab(1)">{{$ctrl.tabNames.description.name}}</a>
-                    </li>
-                    <li class="phone-detail__tab  app-nav__item"
-                        ng-class="{'phone-detail__tab_active' : $ctrl.isTabSelected(2) }">
-                        <a href class="phone-detail__tab-link"
-                           ng-click="$ctrl.selectTab(2)">{{$ctrl.tabNames.specs.name}}</a>
-                    </li>
-                    <li class="phone-detail__tab app-nav__item"
-                        ng-class="{'phone-detail__tab_active' : $ctrl.isTabSelected(3) }">
-                        <a href class="phone-detail__tab-link"
-                           ng-click="$ctrl.selectTab(3)">{{$ctrl.tabNames.reviews.name}}</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="phone-detail__info">
-                <div class="phone-detail__info-item"
-                     ng-show="$ctrl.isTabSelected(1)">
-                    <h3 class="phone-detail__info-title">{{$ctrl.tabNames.description.title}}</h3>
-                    <p class="phone-detail__info-text">{{$ctrl.phone.description.text}}</p>
-                </div>
-                <div class="panel-list__panel"
-                     ng-show="$ctrl.isTabSelected(2)">
-                    <h3 class="phone-detail__info-title">{{$ctrl.tabNames.specs.title}}</h3>
-                    <p class="phone-detail__info-text">{{$ctrl.phone.specs.text}}</p>
-                </div>
-                <div class="panel-list__panel"
-                     ng-show="$ctrl.isTabSelected(3)">
-                    <h3 class="phone-detail__info-title">{{$ctrl.tabNames.reviews.title}}</h3>
-                    <div class="phone-detail__review-wrapper">
-                        <review-tab
-                                reviews="$ctrl.phone.reviews"></review-tab>
+
+            <mz-image-gallery
+                images = "$ctrl.phone.images"
+                phone-name="$ctrl.phone.name"></mz-image-gallery>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="phone-detail__rating hidden-xs">
+                        <div class="phone-detail__rating-info">
+                            <span class="phone-detail__rating-key">Rating:</span>
+                            <span class="phone-detail__rating-value">{{$ctrl.getRating()}}&#x2605;</span>
+                        </div>
+                        <div class="phone-detail__rating-info">
+                            <span class="phone-detail__rating-key">Reviews:</span>
+                            <span class="phone-detail__rating-value">{{$ctrl.getReviewsNumber()}}</span>
+                        </div>
                     </div>
                 </div>
+                <div class="col-xs-12 col-sm-9">
+                    <mz-tabs
+                            tab-names="$ctrl.tabNames"
+                            selected-tab = "$ctrl.selectedTab">
+                        <div class="phone-detail__info">
+                            <div class="phone-detail__info-item"
+                                 ng-show="$ctrl.isTabSelected(1)">
+                                <h3 class="phone-detail__info-title">Product description</h3>
+                                <p class="phone-detail__info-text">{{$ctrl.phone.description.text}}</p>
+                            </div>
+                            <div class="panel-list__panel"
+                                 ng-show="$ctrl.isTabSelected(2)">
+                                <h3 class="phone-detail__info-title">Product specification</h3>
+                                <p class="phone-detail__info-text">{{$ctrl.phone.specs.text}}</p>
+                            </div>
+                            <div class="panel-list__panel"
+                                 ng-show="$ctrl.isTabSelected(3)">
+                                <h3 class="phone-detail__info-title">Product reviews</h3>
+                                <div class="phone-detail__review-wrapper">
+                                    <review-tab
+                                            reviews="$ctrl.phone.reviews"></review-tab>
+                                </div>
+                            </div>
+                        </div>
+                    </mz-tabs>
+                </div>
             </div>
+        </div>
+        <div class="phone-detail__error"
+             ng-hide="$ctrl.isValidId()">There is no device with id: &laquo;{{$ctrl.phoneId}}&raquo;
         </div>
     </div>
 </div>
+
+

@@ -6,11 +6,10 @@ angular.
 
             $routeProvider.
                 when('/phones', {
-                    template: '<app-header search="$ctrl.searchQuery" has-menu="true"></app-header>' +
-                '<phone-list search="$ctrl.searchQuery"></phone-list>'
+                    templateUrl: '/page-templates/phones.template.html'
             }).
                 when('/phones/:phoneId', {
-                    template: '<app-header has-menu="false"></app-header><phone-detail></phone-detail>'
+                templateUrl: '/page-templates/detail.template.html'
             }).
                 otherwise('/phones')
     }
