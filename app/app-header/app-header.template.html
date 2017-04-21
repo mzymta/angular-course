@@ -17,7 +17,10 @@
             <form class="app-header__search-form navbar-form navbar-right">
                 <div class="app-header__search-form-inner form-group">
                     <div class="app-header__search-input-wrapper input-group">
-                        <input type="text" class="app-header__search-input form-control" ng-model="$ctrl.search" id="search" placeholder="Search for..." autocomplete="off">                                   <label class="app-header__search-icon-wrapper input-group-addon" for="search" autofocus>
+                        <input type="text" class="app-header__search-input form-control"
+                               ng-model="$ctrl.search"
+                               ng-model-options="{ getterSetter: true }"
+                               id="search" placeholder="Search for..." autocomplete="off">                                   <label class="app-header__search-icon-wrapper input-group-addon" for="search" autofocus>
                             <span class="app-header__search-icon glyphicon glyphicon-search"></span>
                         </label>
                               </button>

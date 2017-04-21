@@ -4,7 +4,7 @@ directive('mzTabs', function () {
         restrict: 'EA',
         templateUrl: '/directives/mz-tabs/mz-tabs.template.html',
         scope: {
-            tabNames: '=',
+            tabNames: '<',
             selectedTab: '='
         },
         transclude: true,

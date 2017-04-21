@@ -77,7 +77,7 @@
       "specs":{  
          "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       },
-      "rating": 3,
+      "rating": 3.0,
       "reviews":[  
          {  
             "stars":2,
@@ -135,7 +135,7 @@
       "specs":{
          "text":"Motorola Moto Z Android smartphone. Announced 2016, June. Features 3G, 5.5″ AMOLED capacitive touchscreen, 13 MP camera, Wi-Fi, GPS, Bluetooth."
       },
-      "rating": 3,
+      "rating": 3.0,
       "reviews":[
          {
             "stars":1,
@@ -175,7 +175,7 @@
       "specs":{
          "text":"Apple iPhone 7 smartphone with 4.70-inch 750x1334 display powered by quad-core processor alongside 2GB of RAM and 12-megapixel rear camera."
       },
-      "rating": 5,
+      "rating": 5.0,
       "reviews":[
          {
             "stars":5,
@@ -199,7 +199,7 @@
       "specs":{
          "text":"LG G5 smartphone was launched in February 2016. The phone comes with a 5.30-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 554 pixels per inch."
       },
-      "rating": 3,
+      "rating": 3.0,
       "reviews":[
          {
             "stars":3,
@@ -223,7 +223,7 @@
       "specs":{
          "text":"Apple iPhone 7 Plus smartphone was launched in September 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 401 pixels per inch."
       },
-      "rating": 3,
+      "rating": 3.0,
       "reviews":[
          {
             "stars":3,
@@ -247,7 +247,7 @@
       "specs":{
          "text":"Samsung Galaxy S7 smartphone was launched in February 2016. The phone comes with a 5.10-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 577 pixels per inch."
       },
-      "rating": 4,
+      "rating": 4.0,
       "reviews":[
          {
             "stars":3,
@@ -276,7 +276,7 @@
       "specs":{
          "text":"Samsung Galaxy S7 Edge smartphone was launched in February 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1440 pixels by 2560 pixels at a PPI of 534 pixels per inch."
       },
-      "rating": 4,
+      "rating": 4.0,
       "reviews":[
          {
             "stars":3,

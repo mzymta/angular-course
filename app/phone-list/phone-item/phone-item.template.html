@@ -12,15 +12,13 @@
     <span class="phone-item__price">{{$ctrl.phone.price | currency}}</span>
 
     <a href="#!/phones/{{$ctrl.phone.id}}" class="phone-item__rating-wrapper">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="phone-item__rating">
                 <span class="phone-item__key">Rating:</span>
                 <span class="phone-item__value">{{$ctrl.phone.rating}}&#x2605;</span></div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="phone-item__rating">
                 <span class="phone-item__key">Reviews:</span>
                 <span class="phone-item__value">{{$ctrl.getReviewsNumber()}}</span>
             </div>
-        </div>
     </a>
     <p class="phone-item__info">
         {{$ctrl.phone.description.text}}

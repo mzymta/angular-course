@@ -89,9 +89,9 @@ label {
 
 .btn-primary {
   border-radius: 0;
-  background-color: transparent;
+  background-color: #47334e;
   border: 1px solid #47334e;
-  color: #47334e!important;
+  color: #ffffff!important;
   transition: .2s;
 
 }
@@ -101,17 +101,24 @@ label {
 .btn-primary:active,
 .btn-primary:hover:active{
   color: #fff!important;
-  background: #47334e;
+  background: #392640;
+  border-color: #392640;
+}
+
+.btn-primary[disabled] {
+  color: #fff!important;
+  background: #A88294;
+  cursor: default!important;
 }
 
 .btn-primary[disabled]:hover,
 .btn-primary[disabled]:focus,
 .btn-primary[disabled]:hover:active{
-  color: #47334e!important;
-  background: transparent;
-  border-color: inherit;
-  cursor: default;
+  color: #fff!important;
+  background: #A88294;
+  border-color: #47334e;
   outline: none;
+  pointer-events: none;
 }
 
 .app-wrapper {
@@ -446,7 +453,7 @@ label {
 .phone-detail__rating-info {
   display: inline-block;
   font-size: 18px;
-  margin-right: 20px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 
@@ -600,7 +607,21 @@ label {
 }
 
 .review-tab__form {
-  animation: appearTop .4s;
+  animation: appearAccordeon .4s;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #47334e;
+  padding: 30px 0;
+}
+
+.review-tab__form-inner {
+  padding: 0 15px;
+}
+
+.review-tab__form-header {
+  padding: 20px 25px;
+  background-color: #47334e;
+  color: #fff;
+  text-align: center;
 }
 
 .review-tab__stars-wrapper {
@@ -644,6 +665,23 @@ label {
     border: 1px solid #DED0D4;
   }
 
+  .phone-item__title {
+    font-size: 18px;
+    height: 38px;
+    margin-bottom: 5px;
+  }
+
+  .phone-item__rating-wrapper {
+    font-size: 0;
+  }
+
+  .phone-item__rating {
+    width: 50%;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 14px;
+  }
+
   .phone-detail__image-wrapper {
     margin-bottom: 0;
   }
@@ -661,16 +699,17 @@ label {
   }
 
   .review-tab__form {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
   }
 
   .review-tab__form-header {
     padding: 20px 25px;
+    border-top: 1px solid #47334e;
     border-bottom: 1px solid #47334e;
-  }
-
-  .review-tab__form-inner {
-    padding: 20px 25px;
+    background-color: transparent;
+    color: #47334e;
   }
 
   .review-tab__key {
@@ -691,7 +730,7 @@ label {
 
   .phone-detail__rating-info {
     display: block;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .phone-detail__header {
@@ -710,6 +749,10 @@ label {
 
   .review-tab__form {
     width: 70%;
+  }
+
+  .phone-detail__rating-info {
+    font-size: 22px;
   }
 }
 
@@ -739,6 +782,15 @@ label {
   0% {
     opacity: 0.2;
     transform: translateY(10px);
+  }
+}
+
+@keyframes appearAccordeon {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px;
   }
 }
 

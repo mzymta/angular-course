@@ -4,11 +4,9 @@ angular.
     module('phoneItem').
     component('phoneItem', {
     templateUrl: 'phone-list/phone-item/phone-item.template.html',
-    controller: function PhoneItemController() {
-        this.getReviewsNumber = function() {
-            return this.phone.reviews.length;
-        }
-    },
+    controller: ['phoneStore', function PhoneItemController(phoneStore) {
+        this.getReviewsNumber = phoneStore.getReviewsNumber.bind(this, this.phone.id);
+    }],
     bindings: {
         phone: '<'
     }

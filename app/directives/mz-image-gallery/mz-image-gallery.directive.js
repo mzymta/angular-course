@@ -17,7 +17,6 @@ directive('mzImageGallery', function () {
             scope.selectImage = function(index) {
                 scope.mainIndex = index;
             }
-
         }
     }
 });

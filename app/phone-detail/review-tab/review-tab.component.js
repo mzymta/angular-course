@@ -4,7 +4,8 @@ angular.
     module('reviewTab').
     component('reviewTab', {
     templateUrl: 'phone-detail/review-tab/review-tab.template.html',
-    controller: function ReviewTabController($http) {
+    controller: ['phoneStore', function ReviewTabController(phoneStore) {
+
         this.reviewFormShown = false;
 
         this.newReview = {};
@@ -19,18 +20,23 @@ angular.
         };
 
         this.addReview = function() {
-           this.reviews.push(this.newReview);
+            phoneStore.updatePhoneReviews(this.phoneId, this.newReview, true);
 
-           this.newReview = {};
-           this.newReview.stars = 1;
+            this.resetReviewForm();
         };
 
         this.isReviewFormValid = function(form) {
             return form.$valid;
         };
 
-    },
+        this.resetReviewForm = function() {
+            this.newReview = {};
+            this.newReview.stars = 1;
+        }
+
+    }],
     bindings: {
-        reviews: "="
+        reviews: "=",
+        phoneId: "="
     }
 });

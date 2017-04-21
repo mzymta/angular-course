@@ -28,13 +28,14 @@
             </div>
         </div>
         <span class="phone-list__results"
-              ng-show="filteredPhones.length && $ctrl.search">{{filteredPhones.length}} result(s) found matching your query: &laquo;{{$ctrl.search}}&raquo;</span>
+              ng-show="filteredPhones.length && $ctrl.search()">{{filteredPhones.length}} result<span
+                ng-if="filteredPhones.length > 1">s</span> found matching your query: &laquo;{{$ctrl.search()}}&raquo;</span>
 
         <div class="phone-list__items">
             <div class="phone-list__item-wrapper"
-                 ng-repeat="phone in filteredPhones = ($ctrl.phones | filter: {name: $ctrl.search} | orderBy:$ctrl.orderProp)">
+                 ng-repeat="phone in filteredPhones = ($ctrl.getPhones() | filter: {name: $ctrl.search()} | orderBy:$ctrl.orderProp)">
                 <section class="phone-list__item">
-                    <phone-item
+                    <phone-item 
                             phone="phone"></phone-item>
                 </section>
             </div>
@@ -42,9 +43,8 @@
 
         <div class="phone-list__info-message-wrapper">
             <div class="phone-list__info-message"
-                 ng-hide="filteredPhones.length || !$ctrl.search">Oops... We found nothing matching &laquo;{{$ctrl.search}}&raquo;
+                 ng-hide="filteredPhones.length || !$ctrl.search()">Oops... We found nothing matching &laquo;{{$ctrl.search()}}&raquo;
             </div>
         </div>
     </div>
-
 </div>
