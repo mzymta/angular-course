@@ -6,15 +6,15 @@ angular.module('phoneDetail', [])
 
                 this.tabNames = tabsQuery.get;
 
-                this.selectedTab = 3;
+                this.selectedTab = 1;
 
                 this.isTabSelected = function(tabIndex) {
                     return this.selectedTab === tabIndex;
                 };
 
-                this.getRating = phoneStore.getRating.bind(null, this.phone.id);
+                this.getRating = phoneStore.getRating.bind(null, this.phoneId);
 
-                this.getReviewsNumber = phoneStore.getReviewsNumber.bind(this, this.phone.id);
+                this.getReviewsNumber = phoneStore.getReviewsNumber.bind(this, this.phoneId);
 
                 this.isValidId = function() {
                     return !!Object.keys(this.phone).length !== 0;
@@ -22,6 +22,7 @@ angular.module('phoneDetail', [])
 
             }],
             bindings: {
-                phone: "="
+                phone: "=",
+                phoneId: "="
             }
     });

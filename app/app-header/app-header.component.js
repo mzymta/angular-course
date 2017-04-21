@@ -11,7 +11,7 @@ angular.
             this.menuOpen = !this.menuOpen;
         }
 
-        this.search = searchQuery;
+        this.search = searchQuery.query;
 
     },
     bindings: {

@@ -3,11 +3,19 @@
 app.factory('searchQuery', function() {
     var queryString = '';
 
-    return function() {
-        if (!arguments.length) return queryString;
+    return {
+        query: function() {
+            if (!arguments.length) return queryString;
 
-        queryString = arguments[0];
+                queryString = arguments[0];
+            }
     }
+
+    // return function() {
+    //     if (!arguments.length) return queryString;
+    //
+    //     queryString = arguments[0];
+    // }
 });
 
 //TABS SERVICE

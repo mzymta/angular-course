@@ -63,9 +63,10 @@
                 </div>
             </div>
         </div>
-        <div class="phone-detail__error"
-             ng-hide="$ctrl.isValidId()">There is no device with id: &laquo;{{$ctrl.phone.id}}&raquo;
-        </div>
+        <a class="phone-detail__error"
+           ng-href="#!/phones/"
+             ng-hide="$ctrl.isValidId()">There is no device with id: <b>&laquo;{{$ctrl.phoneId}}&raquo;</b><br>Click here to get back to the home page
+        </a>
     </div>
 </div>
 

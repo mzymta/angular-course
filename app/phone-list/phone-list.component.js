@@ -7,6 +7,8 @@ angular.
     controller: ['$http', 'searchQuery', 'phoneStore', function PhoneListController($http, searchQuery, phoneStore) {
         this.getPhones = phoneStore.getPhoneList;
 
-        this.search = searchQuery;
+        this.search = searchQuery.query;
+
+        this.search("");
     }]
 });
