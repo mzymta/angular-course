@@ -10,6 +10,8 @@ angular.
             }).when('/phones/:phoneId', {
                 templateUrl: '/page-templates/detail.template.html',
                 controller: 'PhoneDetailPageController'
+            }).when('/cart', {
+                templateUrl: '/page-templates/cart.template.html'
             }).otherwise('/phones');
     }
 ]).controller('PhoneDetailPageController', ['$scope', '$routeParams', 'phoneStore', function ($scope, $routeParams, phoneStore) {

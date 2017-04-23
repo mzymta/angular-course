@@ -33,6 +33,13 @@
                             <span class="phone-detail__rating-value">{{$ctrl.getReviewsNumber()}}</span>
                         </div>
                     </div>
+                    <div class="phone-detail__btn-cart-wrapper">
+                        <button type="button" class="btn btn-primary btn-block btn-cart"
+                            ng-click ="$ctrl.addToCart()">Add to cart
+                            <image class="btn-cart__image" src="images/shopping-cart.svg"></image>
+                            <span class="btn-cart__count" ng-if="$ctrl.getProductCount()">{{$ctrl.getProductCount()}}</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-9">
                     <mz-tabs

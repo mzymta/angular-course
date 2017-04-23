@@ -4,7 +4,7 @@ angular.
     module('appHeader').
     component('appHeader', {
     templateUrl: 'app-header/app-header.template.html',
-    controller: function AppHeaderController(searchQuery) {
+    controller: ['searchQuery', 'cartHandler', function AppHeaderController(searchQuery, cartHandler) {
         this.menuOpen = false;
 
         this.toggleMenuState = function() {
@@ -13,8 +13,11 @@ angular.
 
         this.search = searchQuery.query;
 
-    },
+        this.getCartCount = cartHandler.getCartCount;
+
+    }],
     bindings: {
+        hasSearch: "<",
         hasMenu: "<"
     }
 });

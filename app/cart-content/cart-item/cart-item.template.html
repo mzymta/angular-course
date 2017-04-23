@@ -1,0 +1,29 @@
+<div class="cart-item">
+    <div class="cart-item__image-wrapper">
+        <image class="cart-item__image"
+               ng-src="{{$ctrl.phone().images[0]}}" alt="$ctrl.phone()"></image>
+    </div>
+    <div class="cart-item__content">
+        <h4 class="cart-item__name">{{$ctrl.phone().name}}</h4>
+        <span class="cart-item__price">{{$ctrl.phone().price | currency}}</span>
+    </div>
+    <div class="cart-item__count">
+        <button type="button"
+                ng-click="$ctrl.minus()"
+                class="cart-item__count-btn cart-item__count-btn_minus">
+            <span class="glyphicon glyphicon-minus"></span>
+        </button>
+        <span class="cart-item__count-number">{{$ctrl.item.count}}</span>
+        <button type="button"
+                ng-click="$ctrl.plus()"
+                class="cart-item__count-btn cart-item__count-btn_plus">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+    </div>
+    <button type="button"
+            ng-click="$ctrl.remove()"
+            class="cart-item__remove-btn">
+        <span class="glyphicon glyphicon-remove"></span>
+    </button>
+
+</div>

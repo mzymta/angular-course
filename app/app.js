@@ -2,6 +2,7 @@
 
 var app = angular.module('mobileStore', [
     'ngRoute',
+    'ngCookies',
     'appHeader',
     'appFooter',
     'phoneList',
@@ -10,9 +11,12 @@ var app = angular.module('mobileStore', [
     'phoneDetail',
     'mzStarRatingDirective',
     'mzImageGalleryDirective',
-    'mzTabsDirective'
+    'mzTabsDirective',
+    'cartContent',
+    'cartItem'
 ]);
 
-app.controller('MobileStoreController', ['phoneStore', function MobileStoreController(phoneStore) {
+app.controller('MobileStoreController', ['phoneStore', 'cartHandler', function MobileStoreController(phoneStore, cartHandler) {
     phoneStore.load();
+    cartHandler.load();
 }]);

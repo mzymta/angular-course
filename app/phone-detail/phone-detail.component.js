@@ -1,7 +1,7 @@
 angular.module('phoneDetail', [])
     .component('phoneDetail', {
             templateUrl: 'phone-detail/phone-detail.component.html',
-            controller: ['$routeParams', '$http', 'phoneStore', 'tabsQuery', function PhoneDetailController($routeParams, $http, phoneStore, tabsQuery) {
+            controller: ['$routeParams', '$http', 'phoneStore', 'tabsQuery', 'cartHandler', function PhoneDetailController($routeParams, $http, phoneStore, tabsQuery, cartHandler) {
                 tabsQuery.load();
 
                 this.tabNames = tabsQuery.get;
@@ -20,6 +20,9 @@ angular.module('phoneDetail', [])
                     return !!Object.keys(this.phone).length !== 0;
                 };
 
+                this.addToCart = cartHandler.addToCart.bind(this, this.phoneId);
+
+                this.getProductCount = cartHandler.getProductCount.bind(this, this.phoneId);
             }],
             bindings: {
                 phone: "=",

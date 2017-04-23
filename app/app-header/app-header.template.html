@@ -13,8 +13,14 @@
             <a class="app-header__logo navbar-brand" href="#"><span class="app-header__logo-icon glyphicon glyphicon-apple"></span>mobileStore</a>
         </div>
         <div class="app-header__collapse-menu collapse navbar-collapse" id="bs-example-navbar-collapse-1"
-             ng-class='{"in" : $ctrl.menuOpen}' ng-if="$ctrl.hasMenu">
-            <form class="app-header__search-form navbar-form navbar-right">
+             ng-class='{"in" : $ctrl.menuOpen}'
+             ng-if="$ctrl.hasMenu">
+            <a class="cart" href="#!/cart">
+                <image class="cart__image" src="images/shopping-cart-purple.svg"></image>
+                <span class="cart__counter">{{$ctrl.getCartCount()}}</span>
+            </a>
+            <form class="app-header__search-form navbar-form navbar-right"
+                  ng-if="$ctrl.hasSearch">
                 <div class="app-header__search-form-inner form-group">
                     <div class="app-header__search-input-wrapper input-group">
                         <input type="text" class="app-header__search-input form-control"
@@ -28,6 +34,7 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </nav>
