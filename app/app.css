@@ -221,6 +221,11 @@ textarea {
     padding: 20px;
   }
 
+  .cart-content {
+
+    animation: appearBottom .3s;
+  }
+
   .cart-content__inner {
     display: flex;
     width: 100%;
@@ -367,6 +372,7 @@ label {
   align-items: center;
   justify-content: center;
   height: 70%;
+  cursor: pointer;
 }
 
 .mz-image-gallery__list {
@@ -895,6 +901,7 @@ label {
 
   .phone-list__item {
     border: 1px solid #DED0D4;
+    animation: appearBottom .3s;
   }
 
   .phone-item__title {
@@ -912,6 +919,10 @@ label {
     display: inline-block;
     vertical-align: baseline;
     font-size: 14px;
+  }
+
+  .phone-detail {
+    animation: appearBottom .3s;
   }
 
   .phone-detail__image-wrapper {

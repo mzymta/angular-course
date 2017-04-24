@@ -175,14 +175,8 @@
       "specs":{
          "text":"Apple iPhone 7 smartphone with 4.70-inch 750x1334 display powered by quad-core processor alongside 2GB of RAM and 12-megapixel rear camera."
       },
-      "rating": 5.0,
-      "reviews":[
-         {
-            "stars":5,
-            "body":"iPhone 7 is good",
-            "author":"douche@turd.com"
-         }
-      ]
+      "rating": 0,
+      "reviews":[]
    },
    {
       "name":"LG G5",

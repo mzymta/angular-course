@@ -12,11 +12,23 @@ directive('mzImageGallery', function () {
 
             scope.isImageSelected = function(index) {
                 return index === scope.mainIndex;
-            }
+            };
 
             scope.selectImage = function(index) {
                 scope.mainIndex = index;
+            };
+
+            scope.switchImage = function() {
+                console.log('test');
             }
+
+            scope.switchImage = function() {
+                if(scope.mainIndex <= 1) {
+                    scope.mainIndex++;
+                    return;
+                }
+                scope.mainIndex = 0;
+            };
         }
     }
 });
