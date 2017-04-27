@@ -4,6 +4,7 @@ require("./shared/styles/style.scss");
 require("./bower_components/angular/angular.min");
 require("./bower_components/angular-route/angular-route");
 require("./bower_components/angular-cookies/angular-cookies");
+require("./bower_components/angular-animate/angular-animate");
 var config = require("./app.config");
 require("./core/core.module");
 require("./directives/mz-star-rating/mz-star-rating.directive");
@@ -21,6 +22,7 @@ require("./cart-content/cart-item/cart-item.module");
 var app = angular.module('mobileStore', [
     'ngRoute',
     'ngCookies',
+    'ngAnimate',
     'core',
     'appHeader',
     'appFooter',

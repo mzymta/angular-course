@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'app'),
@@ -11,15 +12,10 @@ module.exports = {
     module: {
         rules: [{
             test: /\.scss$/,
-            use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "autoprefixer-loader"
-                }, {
-                    loader: "sass-loader"
-                }]
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ["css-loader", "autoprefixer-loader", "sass-loader"]
+            })
              },
             {
                 test: /\.css$/,
@@ -53,6 +49,11 @@ module.exports = {
                 }]
             }]
     },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: 'style.css'
+        })
+    ],
     resolve: {
         alias: {
             'shared': path.resolve(__dirname, './app/shared')

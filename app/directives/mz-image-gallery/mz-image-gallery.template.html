@@ -1,8 +1,14 @@
 <div class="mz-image-gallery">
-    <div class="mz-image-gallery__main-wrapper"
+    <div class="mz-image-gallery__main"
          ng-click="switchImage()">
-        <img ng-src="{{images[mainIndex]}}"
-             alt="{{phoneName}}">
+        <div class="mz-image-gallery__main-image-wrapper"
+             ng-repeat="image in images"
+             ng-show="mainIndex == $index">
+            <img
+                 ng-src="{{image}}"
+                 class="mz-image-gallery__main-image"
+                 alt="{{phoneName}}">
+        </div>
     </div>
     <ul class="mz-image-gallery__list">
         <li class="mz-image-gallery__item"
