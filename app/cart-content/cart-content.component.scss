@@ -27,8 +27,12 @@
 
   &__title-image {
     display: inline-block;
+    vertical-align: middle;
     height: 40px;
     width: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include svg-bg-image($image-cart, $base-color);
   }
 
   &__checkout {

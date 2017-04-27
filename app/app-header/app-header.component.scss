@@ -93,6 +93,9 @@
   &__image {
     width: 33px;
     height: 33px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include svg-bg-image($image-cart, $base-color);
     text-align: center;
     display: inline-block;
     vertical-align: middle;

@@ -4,116 +4,116 @@
       "id":"motorola-moto-z-play",
       "price":449,
       "images": [
-         "images/motorola-moto-z-play.jpg",
-         "images/motorola-moto-z-play-2.jpg",
-         "images/motorola-moto-z-play-3.jpg"
+         "shared/images/motorola-moto-z-play.jpg",
+         "shared/images/motorola-moto-z-play-2.jpg",
+         "shared/images/motorola-moto-z-play-3.jpg"
       ],
-      "description":{  
+      "description":{
          "text":"Motorola Moto Z Play smartphone was launched in August 2016. The phone comes with a 5.50-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 403 pixels per inch."
       },
-      "specs":{  
+      "specs":{
          "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequuntur cupiditate officiis reiciendis, repellat sed?"
       },
       "rating": 4.5,
-      "reviews":[  
-         {  
+      "reviews":[
+         {
             "stars":5,
             "body":"blablabla",
             "author":"tim@tim.com"
          },
-         {  
+         {
             "stars":4,
             "body":"I like it. It's good. Not best. Not worst. Just fine.",
             "author":"rachel@tim.com"
          }
       ]
    },
-   {  
+   {
       "name":"Google Pixel",
       "id":"google-pixel",
       "price":649,
       "images": [
-         "images/google-pixel.jpg",
-         "images/google-pixel-2.jpg",
-         "images/google-pixel-3.jpg"
+         "shared/images/google-pixel.jpg",
+         "shared/images/google-pixel-2.jpg",
+         "shared/images/google-pixel-3.jpg"
       ],
-      "description":{  
+      "description":{
          "text":"Google Pixel smartphone with 5.00-inch 1080x1920 display powered by 1.6GHz quad-core processor alongside 4GB of RAM and 12.3-megapixel rear camera."
       },
-      "specs":{  
+      "specs":{
          "text":"lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolorem ea, in officia perspiciatis quisquam reiciendis sapiente?"
       },
       "rating": 4,
-      "reviews":[  
-         {  
+      "reviews":[
+         {
             "stars":5,
             "body":"2222blablabla",
             "author":"tim@tim.com"
          },
-         {  
+         {
             "stars":3,
             "body":"2222222",
             "author":"rachel@tim.com"
          },
-         {  
+         {
             "stars":4,
             "body":"I like it. It's good. Not best. Not worst. Just fine.",
             "author":"rachel@tim.com"
          }
       ]
    },
-   {  
+   {
       "name":"OnePlus 3T",
       "id":"oneplus-3t",
       "price":399,
       "images": [
-         "images/oneplus-3t.jpg",
-         "images/oneplus-3t-2.jpg",
-         "images/oneplus-3t-3.jpg"
+         "shared/images/oneplus-3t.jpg",
+         "shared/images/oneplus-3t-2.jpg",
+         "shared/images/oneplus-3t-3.jpg"
       ],
-      "description":{  
+      "description":{
          "text":"OnePlus 3T Android smartphone. Announced 2016, November. Features 3G, 5.5″ Optic AMOLED capacitive touchscreen, 16 MP camera, Wi-Fi, GPS."
       },
-      "specs":{  
+      "specs":{
          "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       },
       "rating": 3.0,
-      "reviews":[  
-         {  
+      "reviews":[
+         {
             "stars":2,
             "body":"33333blablabla",
             "author":"tim@tim.com"
          },
-         {  
+         {
             "stars":4,
             "body":"d3333333adadadadadad",
             "author":"rachel@tim.com"
          }
       ]
    },
-   {  
+   {
       "name":"HTC 10",
       "id": "htc-10",
       "price": 599,
       "images": [
-         "images/htc-10.jpg",
-         "images/htc-10-2.jpg",
-         "images/htc-10-3.jpg"
+         "shared/images/htc-10.jpg",
+         "shared/images/htc-10-2.jpg",
+         "shared/images/htc-10-3.jpg"
       ],
-      "description":{  
+      "description":{
          "text":"HTC 10 Android smartphone. Announced 2016, April. Features 3G, 5.2″ Super LCD5 capacitive touchscreen, 12 MP camera, Wi-Fi, GPS, Bluetooth."
       },
-      "specs":{  
+      "specs":{
          "text":"HTC 10 Android smartphone. Announced 2016, April. Features 3G, 5.2″ Super LCD5 capacitive touchscreen, 12 MP camera, Wi-Fi, GPS, Bluetooth."
       },
       "rating": 2.5,
-      "reviews":[  
-         {  
+      "reviews":[
+         {
             "stars":1,
             "body":"444444blablabla",
             "author":"tim@tim.com"
          },
-         {  
+         {
             "stars":4,
             "body":"4444444dadadadadadad",
             "author":"rachel@tim.com"
@@ -125,9 +125,9 @@
       "id":"motorola-moto-z",
       "price":354,
       "images": [
-         "images/motorola-moto-z.jpg",
-         "images/motorola-moto-z-2.jpg",
-         "images/motorola-moto-z-3.jpg"
+         "shared/images/motorola-moto-z.jpg",
+         "shared/images/motorola-moto-z-2.jpg",
+         "shared/images/motorola-moto-z-3.jpg"
       ],
       "description":{
          "text":"Motorola Moto Z Lorem ipsum dolor sit amet, consectetur adipisicing."
@@ -163,11 +163,11 @@
       "name":"iPhone 7",
       "id":"iphone-7",
       "price":649,
-      "image":"images/iphone-7.jpg",
+      "image":"shared/images/iphone-7.jpg",
       "images": [
-         "images/iphone-7.jpg",
-         "images/iphone-7-2.jpg",
-         "images/iphone-7-3.jpg"
+         "shared/images/iphone-7.jpg",
+         "shared/images/iphone-7-2.jpg",
+         "shared/images/iphone-7-3.jpg"
       ],
       "description":{
          "text":"iPhone 7 Lorem ipsum dolor sit amet, consectetur adipisicing."
@@ -183,9 +183,9 @@
       "id":"lg-g5",
       "price":535,
       "images": [
-         "images/lg-g5.jpg",
-         "images/lg-g5-2.jpg",
-         "images/lg-g5-3.jpg"
+         "shared/images/lg-g5.jpg",
+         "shared/images/lg-g5-2.jpg",
+         "shared/images/lg-g5-3.jpg"
       ],
       "description":{
          "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
@@ -207,9 +207,9 @@
       "id":"iphone-7-plus",
       "price":769,
       "images": [
-         "images/iphone-7-plus.jpg",
-         "images/iphone-7-plus-2.jpg",
-         "images/iphone-7-plus-3.jpg"
+         "shared/images/iphone-7-plus.jpg",
+         "shared/images/iphone-7-plus-2.jpg",
+         "shared/images/iphone-7-plus-3.jpg"
       ],
       "description":{
          "text":"LG G5 Lorem ipsum dolor sit amet, consectetur adipisicing."
@@ -231,9 +231,9 @@
       "id":"samsung-galaxy-s7",
       "price":670,
       "images": [
-         "images/samsung-galaxy-s7.jpg",
-         "images/samsung-galaxy-s7-2.jpg",
-         "images/samsung-galaxy-s7-3.jpg"
+         "shared/images/samsung-galaxy-s7.jpg",
+         "shared/images/samsung-galaxy-s7-2.jpg",
+         "shared/images/samsung-galaxy-s7-3.jpg"
       ],
       "description":{
          "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."
@@ -260,9 +260,9 @@
       "id":"samsung-galaxy-s7-edge",
       "price":780,
       "images": [
-         "images/samsung-galaxy-s7-edge.jpg",
-         "images/samsung-galaxy-s7-edge-2.jpg",
-         "images/samsung-galaxy-s7-edge-3.jpg"
+         "shared/images/samsung-galaxy-s7-edge.jpg",
+         "shared/images/samsung-galaxy-s7-edge-2.jpg",
+         "shared/images/samsung-galaxy-s7-edge-3.jpg"
       ],
       "description":{
          "text":"Samsung Galaxy S7 Lorem ipsum dolor sit amet, consectetur adipisicing."

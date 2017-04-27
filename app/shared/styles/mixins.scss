@@ -11,3 +11,8 @@
     @content;
   }
 }
+
+@mixin svg-bg-image($url, $color) {
+  $fill-color: str-slice(inspect($color), 2);
+  background-image: unquote('url("' + $url + "?fill=%23" + $fill-color +'")');
+}
