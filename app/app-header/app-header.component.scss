@@ -1,0 +1,116 @@
+@import "~shared/styles/variables.scss";
+@import "~shared/styles/mixins.scss";
+
+.app-header {
+  border-radius: initial;
+  border: none;
+  border-bottom: 5px solid $base-color;
+  background-color: $white;
+  padding: 10px 0;
+
+  &__logo {
+    color: $base-color!important;
+    font-family: 'Cutive', serif;
+  }
+
+  &__logo-icon {
+    animation: pumpLogo 2s infinite;
+    font-size: 20px;
+    margin-right: 5px;
+
+    &::before {
+      color: $color-5;
+    }
+  }
+
+  &__search-input {
+
+    &::placeholder {
+      color: $color-2;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: $base-color;
+    }
+  }
+
+  &__search-icon-wrapper {
+    border: 0;
+    border-bottom: 1px solid $base-color;
+    border-radius: 0;
+    cursor: text;
+    background-color: transparent;
+  }
+
+
+  &__toggle {
+    border: none;
+    border-radius: 0;
+
+    &:focus,
+    &:hover {
+      background-color: transparent!important;
+    }
+
+    &:focus .icon-bar,
+    &:hover .icon-bar {
+      background-color: $color-6!important;
+    }
+
+    .icon-bar {
+      background-color: $base-color!important;
+      transition: .2s;
+    }
+  }
+
+  &__collapse-menu {
+    border: 0;
+  }
+
+  &__search-form {
+    border: 0;
+
+    @include tablet {
+      padding: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.cart {
+  margin: 8px;
+
+  @include tablet {
+    float: right;
+    margin: 8px;
+    margin-right: -15px;
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  &__image {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__counter {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Cutive', serif;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: $base-color;
+    color: $white;
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+

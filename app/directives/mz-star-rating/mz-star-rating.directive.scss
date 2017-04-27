@@ -1,0 +1,28 @@
+@import "~shared/styles/variables.scss";
+
+.star-rating {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  height: 34px;
+  line-height: 34px;
+
+  &__star {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+    color: $color-4;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__star_filled {
+    color: $base-color;
+  }
+
+  &__star_readonly {
+    cursor: default;
+  }
+}
+

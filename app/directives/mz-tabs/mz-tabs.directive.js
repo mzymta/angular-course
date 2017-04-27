@@ -1,8 +1,10 @@
+require("./mz-tabs.directive.scss");
+
 angular.module('mzTabsDirective', []).
 directive('mzTabs', function () {
     return {
         restrict: 'EA',
-        templateUrl: '/directives/mz-tabs/mz-tabs.template.html',
+        template: require("./mz-tabs.template.html"),
         scope: {
             tabNames: '<',
             selectedTab: '='

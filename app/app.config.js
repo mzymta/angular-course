@@ -1,25 +1,20 @@
-angular.
-    module('mobileStore').
-    config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
-            $locationProvider.hashPrefix('!');
+'use strict';
 
-            $routeProvider.
-                when('/phones', {
-                    templateUrl: '/page-templates/phones.template.html'
-            }).when('/phones/:phoneId', {
-                templateUrl: '/page-templates/detail.template.html',
-                controller: 'PhoneDetailPageController'
-            }).when('/cart', {
-                templateUrl: '/page-templates/cart.template.html'
-            }).otherwise('/phones');
-    }
-]).controller('PhoneDetailPageController', ['$scope', '$routeParams', 'phoneStore', function ($scope, $routeParams, phoneStore) {
-    $scope.test = 1;
-    $scope.phoneId = $routeParams.phoneId;
-    $scope.phone = phoneStore.getPhoneById;
-}]);
+function config($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
 
-function Test() {
-    this.test = 1;
+    $routeProvider.
+    when('/phones', {
+        template: require('./page-templates/phones.template.html')
+    }).when('/phones/:phoneId', {
+        template: require('./page-templates/detail.template.html'),
+        controller: 'PhoneDetailPageController'
+    }).when('/cart', {
+        template: require('./page-templates/cart.template.html')
+    }).otherwise('/phones');
 }
+
+config.$inject = ['$locationProvider', '$routeProvider'];
+
+module.exports = config;
+

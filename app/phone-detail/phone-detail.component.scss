@@ -1,0 +1,87 @@
+@import "~shared/styles/variables.scss";
+@import "~shared/styles/mixins.scss";
+
+.phone-detail {
+  padding: 20px 0 70px;
+
+  @include tablet {
+    animation: appearBottom .3s;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__price {
+    font-size: 24px;
+  }
+
+  &__rating {
+    margin-bottom: 30px;
+
+    @include tablet {
+      padding: 5px 15px 20px;
+      display: table;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__rating-info {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    @include tablet {
+      display: block;
+      font-size: 20px;
+    }
+
+    @include desktop {
+      font-size: 22px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__info-title {
+    font-size: 20px;
+  }
+
+  &__error {
+    font-size: 18px;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    word-break: break-all;
+    padding: 20px;
+    border-top: 1px solid $color-2;
+    border-bottom: 1px solid $color-2;
+  }
+
+  &__btn-cart-wrapper {
+    padding: 0;
+    margin-bottom: 30px;
+
+    @include tablet {
+      padding: 5px 15px 30px;
+    }
+  }
+
+
+  &__image-wrapper {
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}

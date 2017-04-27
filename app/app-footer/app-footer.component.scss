@@ -1,0 +1,26 @@
+@import "~shared/styles/variables.scss";
+
+.app-footer {
+  padding: 30px 15px;
+  text-align: center;
+  color: $white!important;
+  background-color: $base-color;
+  background-image: linear-gradient($base-color, $color-6) ;
+  font-size: 22px;
+  font-family: 'Cutive', serif;
+
+  &__logo {
+    font-family: 'Cutive', serif;
+  }
+
+
+  &__logo-icon {
+    animation: pumpLogo 2s infinite;
+    margin-right: 5px;
+  }
+
+  &__copyright {
+    font-size: 10px;
+  }
+}
+

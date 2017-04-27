@@ -1,0 +1,131 @@
+@import "./variables.scss";
+@import "./animations.scss";
+@import "./mixins.scss";
+
+body {
+  font-family: 'Didact Gothic', sans-serif;
+  color: $base-color!important;
+  min-width: 280px;
+  background-color: $white;
+}
+
+body {
+  color: $base-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  padding: 6px 12px;
+  border: 1px solid $base-color;
+  outline: none;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}
+
+/* bootstrap*/
+label {
+  font-weight: 400;
+}
+.form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid $base-color;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $base-color;
+}
+
+.btn-primary {
+  border-radius: 0;
+  background-color: $base-color;
+  border: 1px solid $base-color;
+  color: $white!important;
+  transition: .2s;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover:active{
+  color: $white!important;
+  background: $color-6;
+  border-color: $color-6;
+  outline: none;
+}
+
+.btn-primary[disabled] {
+  color: $white!important;
+  background: $color-2;
+  cursor: default!important;
+}
+
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover:active{
+  color: $white!important;
+  background: $color-2;
+  border-color: $base-color;
+  outline: none;
+  pointer-events: none;
+}
+
+.btn-cart {
+  position: relative;
+
+  &__image {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  &__count {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    background-color: $white;
+    border-radius: 50%;
+    line-height: 15px;
+    color: $base-color;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+

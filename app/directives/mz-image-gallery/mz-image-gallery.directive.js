@@ -1,8 +1,10 @@
+require("./mz-image-gallery.directive.scss");
+
 angular.module('mzImageGalleryDirective', []).
 directive('mzImageGallery', function () {
     return {
         restrict: 'EA',
-        templateUrl: '/directives/mz-image-gallery/mz-image-gallery.template.html',
+        template: require("./mz-image-gallery.template.html"),
         scope: {
             images: '=',
             phoneName: "="

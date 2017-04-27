@@ -1,0 +1,67 @@
+
+@keyframes appearRight {
+  0% {
+    opacity: 0.2;
+    transform: translateX(10px);
+  }
+}
+
+@keyframes appearLeft {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes appearTop {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes appearBottom {
+  0% {
+    opacity: 0.2;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes appearAccordeon {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@keyframes appearBlinking {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pumpLogo {
+  50% {
+    transform: scale(1.15);
+  }
+}

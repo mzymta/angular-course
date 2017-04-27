@@ -1,3 +1,7 @@
 'use strict';
 
-angular.module('phoneList', []);
+require("./phone-list.component.scss");
+var PhoneListComponent = require("./phone-list.component");
+
+angular.module('phoneList', [])
+    .component('phoneList', PhoneListComponent);

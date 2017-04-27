@@ -1,10 +1,10 @@
 'use strict';
 
-angular.
-    module('appFooter').
-    component('appFooter', {
-    templateUrl: 'app-footer/app-footer.template.html',
-    controller: function AppFooterController() {
+function AppFooterController() {
 
-    }
-});
+}
+
+module.exports = {
+    template: require('./app-footer.template.html'),
+    controller: AppFooterController
+};

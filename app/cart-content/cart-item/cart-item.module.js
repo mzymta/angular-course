@@ -1,3 +1,7 @@
 'use strict';
 
-angular.module('cartItem', []);
+require("./cart-item.component.scss");
+var CartItemComponent = require("./cart-item.component");
+
+angular.module('cartItem', [])
+    .component('cartItem', CartItemComponent);

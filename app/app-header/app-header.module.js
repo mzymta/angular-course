@@ -1,3 +1,7 @@
 'use strict';
 
-angular.module('appHeader', []);
+require('./app-header.component.scss');
+var AppHeaderComponent = require("./app-header.component");
+
+angular.module('appHeader', []).
+component('appHeader', AppHeaderComponent);

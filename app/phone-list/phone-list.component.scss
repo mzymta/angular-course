@@ -1,0 +1,92 @@
+@import '~shared/styles/variables.scss';
+@import '~shared/styles/mixins.scss';
+
+.phone-list {
+  padding-bottom: 20px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &__item-wrapper {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+
+    @include tablet {
+      width: 33.33333333%;
+    }
+
+    @include desktop {
+      width: 25%;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    border-bottom: 1px solid $color-2;
+    border-radius: 20px;
+    width: 100%;
+
+    @include tablet {
+      border: 1px solid $color-3;
+      animation: appearBottom .3s;
+    }
+  }
+
+  &__info-message-wrapper {
+    margin-top: 10px;
+  }
+
+  &__info-message {
+    font-size: 18px;
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    word-break: break-all;
+    padding: 20px;
+    border-top: 1px solid $color-2;
+    border-bottom: 1px solid $color-2;
+  }
+
+  &__results {
+    margin-top: 20px;
+    padding: 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-2;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+
+    @include tablet {
+      border-bottom: 0;
+      text-align: left;
+    }
+  }
+}
+
+.filter-pane {
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid $base-color;
+  border-bottom-width: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__btn-block {
+    padding: 5px 10px;
+  }
+
+  &__btn {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+

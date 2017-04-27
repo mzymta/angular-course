@@ -1,3 +1,5 @@
+require("./mz-star-rating.directive.scss");
+
 angular.module('mzStarRatingDirective', []).
 directive('mzStarRating', function () {
     return {

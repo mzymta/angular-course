@@ -1,0 +1,19 @@
+@import "./functions.scss";
+
+//colors
+$base-color: #47334e;
+$white: #ffffff;
+$color-2: apply-color-diff($base-color, color-diff(#47334e, #A88294)); //#A88294
+$color-3: apply-color-diff($base-color, color-diff(#47334e, #DED0D4)); //#DED0D4
+$color-4: apply-color-diff($base-color, color-diff(#47334e, #CCBFC3)); //#CCBFC3
+$color-5: apply-color-diff($base-color, color-diff(#47334e, #829466)); //#829466
+$color-6: apply-color-diff($base-color, color-diff(#47334e, #392640)); //#392640
+
+//screens
+$tablet-width: 768px;
+$desktop-width: 992px;
+
+
+
+
+
